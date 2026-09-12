@@ -15,3 +15,9 @@ Este repositorio comeca pela compreensao do problema e do evento. Ainda nao ha i
 ## Regra atual
 
 Antes do OK do time, este projeto permanece em **contextualizacao**. Nao promover ideia, arquitetura, divisao de agentes ou escolha de tecnologia como decisao.
+
+## Licenca e acesso publico
+
+Este repositorio e **publico** e o projeto e disponibilizado sob a **licenca MIT**. Consulte o texto completo em [LICENSE](LICENSE).
+
+Os conteudos de terceiros citados nas pesquisas permanecem sujeitos aos direitos e licencas de seus respectivos titulares.

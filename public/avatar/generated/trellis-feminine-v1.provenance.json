@@ -1,0 +1,31 @@
+{
+  "asset": "trellis-feminine-v1.glb",
+  "status": "generated_structurally_validated_not_app_approved",
+  "generatedAtUtc": "2026-09-12T17:40:09Z",
+  "generator": "trellis-community/TRELLIS",
+  "spaceRevision": "91c1b5afbf24094b3ec7d8a27ae2e49608bd668f",
+  "model": "microsoft/TRELLIS-image-large",
+  "modelCardLicense": "mit",
+  "softwareLicenseUrl": "https://github.com/microsoft/TRELLIS/blob/main/LICENSE",
+  "input": "design/avatar/avatar-feminine-input-v1.png",
+  "inputGenerator": "native image_gen",
+  "sha256": "56ff0c6084e1b1c587869a52ed4a619cd910663ffe9c8d9a488ffb8b572f1106",
+  "bytes": 1309452,
+  "triangles": 4592,
+  "vertices": 3479,
+  "meshes": 1,
+  "skins": 0,
+  "animations": 0,
+  "textureSize": [
+    1024,
+    1024
+  ],
+  "freeSpace": true,
+  "paidJob": false,
+  "assetLicense": "No separate MIT license assigned to generated output; software/model license is recorded for provenance.",
+  "limitations": [
+    "One mesh and one material, not modular hair/clothes",
+    "No rig or animations",
+    "Final rendering in application not tested"
+  ]
+}

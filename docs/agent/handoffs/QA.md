@@ -1,6 +1,10 @@
 # QA — Rebobina
 
-STATUS: local_page_polish_verified_public_snapshot_pending
+STATUS: auth_ui_local_ready_public_snapshot_in_progress
+
+## Autenticação e avatar — estado vigente
+
+`artifacts/qa/auth-ui-report.json` e `artifacts/qa/auth-ui-review.md`: 13 checkpoints locais concluídos, um cadastro sintético UI, zero IA e zero erros inesperados. Cadastro, avatar personalizado salvo, palco com perfil após reload, relogin da mesma conta e logout→demo sem nome/estado anterior passaram. PNGs login/perfil/palco desktop/mobile revisados sem P0/P1 visual. Cross-tab logout permanece PENDENTE: sessão encerrada e credencial descartada; não repetir cadastro. ROOT/coordenador avisados. Deploy público novo em verificação somente leitura, login + quatro rotas demo; o resultado substituirá a pendência histórica de snapshot.
 
 ## Mesa — estado preenchido e Novo material
 

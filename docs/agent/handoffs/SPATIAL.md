@@ -2,6 +2,8 @@
 
 ## Avatar de perfil — 2026-09-12, 14:40 SP
 
+FREEZE deste executor às14:43: QA local confirmou avatar cacheado/terracota salvo, visível no palco, mantido após reload e relogin (`auth-ui-report.json`,13checkpoints). API pública de contas/avatares passou12checks em `root-auth-public.json`. Publicação final/seguimento agora são do fork dedicado de deploy, registrado em `DEPLOY_LATEST.md`; este chat não deve retomar gestão macro ou criar writers.
+
 INTEGRADO: SpatialStage recebe `presenterAvatar?: AvatarConfig` e, quando a prop está ausente, usa `useOptionalAuth()?.user?.avatar`. O builder compartilhado `createAvatar` é aplicado somente ao apresentador; jurados/audiência não recebem atributos do usuário. Sem provider/perfil, permanece o personagem de demonstração anterior.
 
 O motor aceita PresenterFactory opcional, normaliza cada figura para 2,08 unidades, pés sobre o palco, frente +Z e movimento discreto. Salvar nova configuração recria a cena e libera a antiga; perguntas e respostas são mantidas pelo componente proprietário. `data-presenter=profile` permite verificar a integração no QA.

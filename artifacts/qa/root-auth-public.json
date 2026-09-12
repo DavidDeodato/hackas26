@@ -1,0 +1,24 @@
+{
+  "status": "PASS_AUTH_ACCOUNT_ISOLATION",
+  "origin": "https://rebobina-h4h.vercel.app",
+  "at": "2026-09-12T17:43:10.363Z",
+  "checks": [
+    "Anonymous visitor is not authenticated",
+    "Two independent real accounts registered",
+    "Authentication cookie has required protection flags",
+    "Saved account material isolated from second account and guest",
+    "Profile name and all avatar customization fields persist",
+    "Cross-origin profile write rejected",
+    "Invalid avatar field rejected",
+    "Logout revokes old authentication session",
+    "Logged-out browser cannot read prior account workspace",
+    "Wrong password rejected without authenticating",
+    "Re-login restores same account data and avatar",
+    "Short password rejected"
+  ],
+  "limitations": [
+    "Synthetic test accounts only; no AI generation calls",
+    "No email verification, recovery, or production security audit claimed",
+    "Browser avatar and login visual QA are a separate gate"
+  ]
+}

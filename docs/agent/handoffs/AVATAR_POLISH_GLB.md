@@ -2,6 +2,10 @@
 
 Data: 2026-09-12. Estado: implementação e QA visual local concluídos; publicação e fluxo persistido são gates do ROOT/QA.
 
+## Gate persistido confirmado às17:58 UTC
+
+Leitura direta de `artifacts/qa/glb-ui-review.md` e `glb-ui-report.json`, mais inspeção da captura feminina `glb-ui-trellis-feminine-stage-reload.png`: ambos os modelos passaram seleção → salvar → `/api/auth/me` → reload → mesmo modelo no palco, desktop e mobile, source correto e fallback false. Doze checkpoints QA, zero erro/overflow; logout entre abas também aprovado. O QA criou uma conta fictícia adicional autorizada pelo coordenador; este executor não criou contas. A validação é do palco de preparação, sem nova geração de ensaio por IA. Vídeo local liberado pelo QA. Publicação dos GLBs continua sendo gate separado.
+
 ## Entrega deste executor
 
 - `avatar-builder.ts`: silhueta esculpida, torso/roupa contínuos, olhos com íris e brilho, sobrancelhas, nariz, mãos/polegares, tênis arredondados e cabelos com volumes suaves. Oito combinações de template/cabelo preservadas. API e origem dos pés preservadas.

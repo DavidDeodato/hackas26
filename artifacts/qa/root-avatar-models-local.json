@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-12T17:54:12.832Z",
+  "origin": "http://localhost:4173",
+  "status": "PASS_CURATED_AVATAR_MODELS",
+  "checks": [
+    "masculine: real GLB2 with embedded texture served successfully",
+    "feminine: real GLB2 with embedded texture served successfully",
+    "trellis-masculine: selected model persisted and reloaded through account API",
+    "trellis-feminine: selected model persisted and reloaded through account API",
+    "procedural: selected model persisted and reloaded through account API",
+    "Arbitrary model URL rejected",
+    "Model choice preserved after logout and re-login"
+  ],
+  "assets": [
+    {
+      "path": "/avatar/generated/trellis-masculine-v1.glb",
+      "bytes": 1283312,
+      "sha256": "bc3124ebea3743a02c0a5882e8225d0e0c5e0bccad348c35b9682488f71ce520",
+      "meshes": 1,
+      "skins": 0
+    },
+    {
+      "path": "/avatar/generated/trellis-feminine-v1.glb",
+      "bytes": 1309452,
+      "sha256": "56ff0c6084e1b1c587869a52ed4a619cd910663ffe9c8d9a488ffb8b572f1106",
+      "meshes": 1,
+      "skins": 0
+    }
+  ],
+  "limitations": [
+    "Synthetic account; no AI calls",
+    "GLB header and persistence validation do not replace actual browser rendering QA",
+    "Generated models are monolithic and do not provide editable hair or rigged animation"
+  ]
+}

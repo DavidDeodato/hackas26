@@ -1,0 +1,11 @@
+{
+  "asset": "trellis-masculine-v1.glb",
+  "received_date": "2026-09-12",
+  "origin": "User supplied sample.glb after generating the missing avatar through their Hugging Face account.",
+  "sha256": "bc3124ebea3743a02c0a5882e8225d0e0c5e0bccad348c35b9682488f71ce520",
+  "generator_metadata": "https://github.com/mikedh/trimesh",
+  "model_identity": "Masculine preset inferred from delivery context; validate visually in the application.",
+  "generation_parameters": "Not independently observed for this user-supplied file.",
+  "license_note": "No separate output license inferred from the MIT license of TRELLIS software/model.",
+  "limitations": ["Single mesh and material", "No rig, skins or animations", "Not modular hair or clothing"]
+}

@@ -1,14 +1,32 @@
 import type {StagePerson} from './SpatialStage';
 
-export interface StageController {focus:(id?:string)=>void;setView:(mode:'overview'|'focus')=>void;dispose:()=>void}
+export interface StageController {focus:(id?:string)=>void;setView:(mode:'overview'|'focus')=>void;dispose:()=>void;avatarSource?:string;avatarFallback?:boolean}
 export type PresenterFactory=(three:any)=>any;
 
+function disposeObjectResources(root:any){
+  const geometries=new Set<any>(),materials=new Set<any>(),textures=new Set<any>();
+  root?.traverse((object:any)=>{
+    if(object.geometry)geometries.add(object.geometry);
+    for(const material of object.material?(Array.isArray(object.material)?object.material:[object.material]):[]){
+      materials.add(material);
+      for(const value of Object.values(material))if(value&&typeof value==='object'&&(value as {isTexture?:boolean}).isTexture)textures.add(value);
+    }
+  });
+  textures.forEach(t=>t.dispose());materials.forEach(m=>m.dispose());geometries.forEach(g=>g.dispose());
+}
+
 /** Three r180 is vendored with its MIT license; no remote network dependency. */
-export async function createSpatialScene(host:HTMLElement,people:StagePerson[],onFailure:()=>void,presenterFactory?:PresenterFactory):Promise<StageController>{
+export async function createSpatialScene(host:HTMLElement,people:StagePerson[],onFailure:()=>void,presenterFactory?:PresenterFactory,signal?:AbortSignal):Promise<StageController>{
   // @ts-expect-error Vendored upstream JavaScript deliberately has no generated declarations.
   const T=await import('../../vendor/three/three.module.min.js');
+  if(signal?.aborted)throw new DOMException('Scene cancelled','AbortError');
+  // Resolve assets before allocating a renderer; failed/late loads cannot leave a canvas behind.
+  const presenterModel=presenterFactory?await presenterFactory(T):undefined;
+  if(signal?.aborted){disposeObjectResources(presenterModel);throw new DOMException('Scene cancelled','AbortError');}
   // Dynamic, isolated renderer keeps the rest of the application independent of WebGL.
-  const renderer=new T.WebGLRenderer({antialias:true,alpha:true,powerPreference:'low-power'});
+  let renderer:any;
+  try{renderer=new T.WebGLRenderer({antialias:true,alpha:true,powerPreference:'low-power'});}
+  catch(error){disposeObjectResources(presenterModel);throw error;}
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.5));
   renderer.toneMapping=T.ACESFilmicToneMapping;
@@ -153,14 +171,16 @@ export async function createSpatialScene(host:HTMLElement,people:StagePerson[],o
   let presenterGesture:any;
   if(presenterFactory){
     // Normalize the profile avatar to the same stage scale, with its feet on the podium.
-    const model=presenterFactory(T);
-    const bounds=new T.Box3().setFromObject(model);
+    const model=presenterModel;
+    // Fit a wrapper so transforms/orientation applied by the GLB loader stay intact.
+    const fitted=new T.Group();fitted.add(model);
+    const bounds=new T.Box3().setFromObject(fitted);
     const size=bounds.getSize(new T.Vector3());
     const center=bounds.getCenter(new T.Vector3());
     const scale=2.08/Math.max(.01,size.y);
-    model.scale.multiplyScalar(scale);
-    model.position.set(-center.x*scale,-bounds.min.y*scale,-center.z*scale);
-    presenterGesture=new T.Group();presenterGesture.add(model);presenter.add(presenterGesture);
+    fitted.scale.setScalar(scale);
+    fitted.position.set(-center.x*scale,-bounds.min.y*scale,-center.z*scale);
+    presenterGesture=new T.Group();presenterGesture.add(fitted);presenter.add(presenterGesture);
   }else{
     presenterGesture=avatar(presenter,0xd1bca1,0xba8263,false,0);
   }
@@ -233,22 +253,13 @@ export async function createSpatialScene(host:HTMLElement,people:StagePerson[],o
   }
   camera.position.copy(cameraPos);camera.lookAt(target);frameCamera();frame=requestAnimationFrame(render);
   return {
+    avatarSource:presenterModel?.userData?.model??'procedural',
+    avatarFallback:Boolean(presenterModel?.userData?.loadFallback),
     focus(id){focusId=id;audienceObjects.forEach(p=>{const active=p.id===id;p.halo.material.opacity=active?.95:.14;p.light.intensity=active?1.3:0;});updateCamera();},
     setView(next){mode=next;updateCamera();},
     dispose(){
       if(disposed)return;disposed=true;cancelAnimationFrame(frame);observer.disconnect();intersection.disconnect();renderer.domElement.removeEventListener('webglcontextlost',loss);
-      const geometries=new Set<any>(),materials=new Set<any>(),textures=new Set<any>();
-      scene.traverse((object:any)=>{
-        if(object.geometry)geometries.add(object.geometry);
-        if(!object.material)return;
-        for(const material of Array.isArray(object.material)?object.material:[object.material]){
-          materials.add(material);
-          for(const value of Object.values(material)){
-            if(value&&typeof value==='object'&&(value as {isTexture?:boolean}).isTexture)textures.add(value);
-          }
-        }
-      });
-      textures.forEach(t=>t.dispose());materials.forEach(m=>m.dispose());geometries.forEach(g=>g.dispose());renderer.dispose();renderer.domElement.remove();
+      disposeObjectResources(scene);renderer.dispose();renderer.domElement.remove();
     }
   };
 }

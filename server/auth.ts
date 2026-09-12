@@ -10,7 +10,8 @@ const passwordSchema = z.string().min(10).max(128);
 const emailSchema = z.string().trim().toLowerCase().email().max(254);
 const nameSchema = z.string().trim().min(1).max(80);
 const color = z.string().regex(/^#[0-9a-fA-F]{6}$/);
-const avatarSchema = z.object({
+export const avatarSchema = z.object({
+  model: z.enum(['procedural', 'trellis-masculine', 'trellis-feminine']).optional(),
   template: z.enum(['masculine', 'feminine']),
   hairStyle: z.enum(['short', 'long', 'curly', 'bald']),
   hairColor: color, skinColor: color, topColor: color, pantsColor: color, shoesColor: color,

@@ -1,8 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import type { Request, Response } from 'express';
-import { hashPassword, verifyPassword, sameOriginProtection, userWorkspaceId } from '../server/auth.js';
+import { avatarSchema, hashPassword, verifyPassword, sameOriginProtection, userWorkspaceId } from '../server/auth.js';
 import { defaultAvatar } from '../shared/auth.js';
+
+test('avatar model supports the curated enum and preserves legacy profiles without a model', () => {
+  assert.equal(Object.hasOwn(defaultAvatar, 'model'), false);
+  assert.deepEqual(avatarSchema.parse(defaultAvatar), defaultAvatar);
+  for (const model of ['procedural', 'trellis-masculine', 'trellis-feminine']) {
+    assert.equal(avatarSchema.parse({...defaultAvatar, model}).model, model);
+    assert.deepEqual(avatarSchema.partial().parse({model}), {model});
+  }
+  for (const model of ['unknown', 'https://example.invalid/model.glb', '/avatar/generated/custom.glb', '', null, 1]) {
+    assert.equal(avatarSchema.partial().safeParse({model}).success, false);
+  }
+  assert.equal(avatarSchema.partial().safeParse({model: 'procedural', modelUrl: 'https://example.invalid/model.glb'}).success, false);
+});
 
 test('password salts differ and only correct passwords verify; hashes are versioned', async () => {
   const password = 'test-only-long-password';

@@ -1,0 +1,43 @@
+const {chromium}=require('C:/Users/lucas/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs/promises');
+const crypto=require('node:crypto');
+let browser,step='preflight';
+const checks=[],errors=[],glbHttp=[],authHttp=[];
+const base=process.env.QA_GLB_BASE||'http://localhost:4173';
+const report=()=>({at:new Date().toISOString(),base,step,checks,errors,glbHttp,authHttp,syntheticAccountsCreated:authHttp.some(r=>r.path==='/api/auth/register'&&r.status===200)?1:0,aiCalls:0});
+(async()=>{
+ if(process.env.QA_GLB_REGISTER_AUTHORIZED!=='1')throw new Error('Explicit one-account authorization flag required; do not rerun after signup.');
+ browser=await chromium.launch({headless:true});
+ const context=await browser.newContext({viewport:{width:1280,height:720}}),page=await context.newPage();page.setDefaultTimeout(20000);
+ const observe=p=>{p.on('pageerror',e=>errors.push(String(e)));p.on('console',m=>{if(m.type()==='error')errors.push(m.text());});p.on('response',r=>{const path=new URL(r.url()).pathname;if(path.endsWith('.glb'))glbHttp.push({path,status:r.status(),contentType:r.headers()['content-type']});if(path.startsWith('/api/auth/'))authHttp.push({path,status:r.status()});});};observe(page);
+ const email=`qa-glb-${Date.now()}@example.test`,password=crypto.randomBytes(20).toString('base64url');
+ await page.goto(base,{waitUntil:'networkidle'});
+ await page.getByRole('button',{name:'Criar conta',exact:true}).click();await page.getByLabel('Como podemos te chamar?',{exact:true}).fill('QA Modelos 3D');
+ await page.getByLabel('E-mail',{exact:true}).fill(email);await page.locator('#auth-password').fill(password);
+ step='one-signup';await page.getByRole('button',{name:'Criar meu espaço',exact:true}).click();await page.locator('.profile-trigger').waitFor();checks.push({check:step,pass:true});
+ const shot=async(label,locator=page)=>{await page.waitForTimeout(600);await locator.screenshot({path:`artifacts/qa/glb-ui-${label}.png`,...(locator===page?{fullPage:true}:{})});};
+ const metrics=()=>page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,canvas:document.querySelectorAll('canvas').length,preview:{...document.querySelector('.avatar-preview')?.dataset},stage:{...document.querySelector('.spatial-stage')?.dataset}}));
+ const selectors=[['trellis-feminine',process.env.QA_GLB_FEMININE_LABEL||'Modelo feminino'],['trellis-masculine',process.env.QA_GLB_MASCULINE_LABEL||'Modelo masculino']];
+ for(const [model,label] of selectors){
+  await page.setViewportSize({width:1280,height:720});await page.locator('.profile-trigger').click();await page.getByRole('dialog').waitFor();
+  step=model+'-select';await page.getByRole('button',{name:label,exact:true}).click();
+  await page.locator(`.avatar-preview[data-avatar-renderer="ready"][data-avatar-source="${model}"]`).waitFor();
+  const proceduralControlsHidden=await page.getByRole('button',{name:'Cacheado',exact:true}).count()===0&&await page.getByRole('button',{name:'Parte de cima: Terracota',exact:true}).count()===0;
+  checks.push({check:model+'-controls',proceduralControlsHidden});if(!proceduralControlsHidden)throw new Error('Procedural controls remain active for generated model');
+  await page.waitForTimeout(1800);
+  await shot(model+'-preview',page.locator('.avatar-preview'));
+  checks.push({check:step,metrics:await metrics(),buttons:await page.getByRole('dialog').getByRole('button').evaluateAll(nodes=>nodes.map(n=>({label:n.getAttribute('aria-label')||n.textContent,disabled:n.disabled,pressed:n.getAttribute('aria-pressed')})))});
+  step=model+'-save';await page.getByRole('button',{name:'Salvar perfil',exact:true}).click();await page.getByText('Perfil salvo. Seu avatar já está atualizado.',{exact:true}).waitFor();
+  const identity=await page.evaluate(async()=>{const r=await fetch('/api/auth/me');const j=await r.json();return {status:r.status,model:j.user?.avatar?.model,template:j.user?.avatar?.template};});
+  checks.push({check:step,identity});if(identity.model!==model)throw new Error('Saved model mismatch');
+  await shot(model+'-profile-desktop');await page.setViewportSize({width:390,height:844});await shot(model+'-profile-mobile');
+  await page.getByRole('button',{name:'Fechar perfil',exact:true}).click();await page.locator(`.spatial-stage[data-avatar-source="${model}"][data-avatar-fallback="false"]`).waitFor();await page.waitForTimeout(800);await shot(model+'-stage-mobile');checks.push({check:model+'-stage-mobile',metrics:await metrics()});
+  await page.setViewportSize({width:1280,height:720});await page.reload({waitUntil:'networkidle'});await page.locator('.profile-trigger').waitFor();await page.locator(`.spatial-stage[data-avatar-source="${model}"][data-avatar-fallback="false"]`).waitFor();await page.waitForTimeout(800);await shot(model+'-stage-reload');
+  const reloaded=await page.evaluate(async()=>{const r=await fetch('/api/auth/me');const j=await r.json();return {status:r.status,model:j.user?.avatar?.model};});checks.push({check:model+'-reload',identity:reloaded,metrics:await metrics()});if(reloaded.model!==model)throw new Error('Reload model mismatch');
+ }
+ step='cross-tab-logout';const second=await context.newPage();second.setDefaultTimeout(20000);observe(second);await second.goto(base,{waitUntil:'networkidle'});await second.locator('.profile-trigger').click();await second.getByRole('dialog').waitFor();await second.getByRole('button',{name:'Sair da conta',exact:true}).click();await second.getByRole('button',{name:'Entrar no meu espaço',exact:true}).waitFor();await page.getByRole('button',{name:'Entrar no meu espaço',exact:true}).waitFor();checks.push({check:step,bothLogin:true,stateClear:await page.evaluate(()=>history.state===null)});await shot('cross-tab-logout');
+ for(const model of ['trellis-feminine','trellis-masculine'])if(!glbHttp.some(r=>r.path.includes(model)&&r.status===200))throw new Error('Missing successful GLB response: '+model);
+ if(errors.length||glbHttp.some(r=>r.status>=400)||authHttp.some(r=>r.status>=400))throw new Error('Unexpected browser or HTTP errors');
+ if(checks.some(c=>c.stateClear===false||c.metrics?.scrollWidth>c.metrics?.width))throw new Error('Navigation state or overflow gate failed');
+ step='complete';await fs.writeFile('artifacts/qa/glb-ui-report.json',JSON.stringify({...report(),status:'COMPLETE'},null,2));console.log(JSON.stringify({...report(),status:'COMPLETE'}));await browser.close();
+})().catch(async e=>{await fs.writeFile('artifacts/qa/glb-ui-report.json',JSON.stringify({...report(),status:'FAILED',error:e.message},null,2));console.log(JSON.stringify({...report(),status:'FAILED',error:e.message}));await browser?.close();process.exitCode=1;});

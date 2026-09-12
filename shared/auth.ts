@@ -1,4 +1,6 @@
 export interface AvatarConfig {
+  /** Absent on existing profiles: render the procedural avatar. */
+  model?: 'procedural' | 'trellis-masculine' | 'trellis-feminine';
   template: 'masculine' | 'feminine';
   hairStyle: 'short' | 'long' | 'curly' | 'bald';
   hairColor: string;

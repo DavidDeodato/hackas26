@@ -1,7 +1,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {createSpatialScene,type StageController} from './spatial-scene';
-import type {AvatarConfig} from '../../../shared/auth';
-import {createAvatar} from '../avatar/avatar-builder';
+import {defaultAvatar,type AvatarConfig} from '../../../shared/auth';
+import {createStageAvatar} from '../avatar/avatar-loader';
 import {useOptionalAuth} from '../../lib/auth';
 import './spatial-stage.css';
 
@@ -22,12 +22,13 @@ export default function SpatialStage({people,activePersonId,onSelectPerson,phase
   const presenterAvatar=providedAvatar??auth?.user?.avatar;
   const host=useRef<HTMLDivElement>(null);
   const engine=useRef<StageController|null>(null);
-  const latest=useRef({people,activePersonId,presenterAvatar});
-  latest.current={people,activePersonId,presenterAvatar};
   const [status,setStatus]=useState<'loading'|'ready'|'fallback'>('loading');
   const [display,setDisplay]=useState<'cinematic'|'interactive'>('interactive');
   const [view,setView]=useState<'overview'|'focus'>('overview');
   const [selected,setSelected]=useState<string>();
+  const [avatarRender,setAvatarRender]=useState({source:'procedural',fallback:false});
+  const latest=useRef({people,activePersonId,presenterAvatar,view,selected});
+  latest.current={people,activePersonId,presenterAvatar,view,selected};
   const shown=people.slice(0,3);
   const castKey=shown.map(p=>p.id).join('|');
   const avatarKey=JSON.stringify(presenterAvatar??null);
@@ -35,23 +36,27 @@ export default function SpatialStage({people,activePersonId,onSelectPerson,phase
     const element=host.current;
     if(!element||display!=='interactive')return;
     let cancelled=false;
+    const abort=new AbortController();
     setStatus('loading');
-    const avatar=latest.current.presenterAvatar;
-    createSpatialScene(element,latest.current.people.slice(0,3),()=>{if(!cancelled)setStatus('fallback');},avatar?three=>createAvatar(three,avatar):undefined)
+    setAvatarRender({source:'loading',fallback:false});
+    const avatar=latest.current.presenterAvatar??defaultAvatar;
+    createSpatialScene(element,latest.current.people.slice(0,3),()=>{if(!cancelled)setStatus('fallback');},three=>createStageAvatar(three,avatar),abort.signal)
       .then(controller=>{
         if(cancelled){controller.dispose();return;}
         engine.current=controller;
-        controller.focus(latest.current.activePersonId);
+        controller.focus(latest.current.selected??latest.current.activePersonId);
+        controller.setView(latest.current.view);
+        setAvatarRender({source:controller.avatarSource??'procedural',fallback:Boolean(controller.avatarFallback)});
         setStatus('ready');
       }).catch(()=>{if(!cancelled)setStatus('fallback');});
-    return()=>{cancelled=true;engine.current?.dispose();engine.current=null;};
+    return()=>{cancelled=true;abort.abort();engine.current?.dispose();engine.current=null;};
   },[castKey,display,avatarKey]);
   useEffect(()=>{engine.current?.focus(activePersonId);setSelected(undefined);},[activePersonId]);
   const focused=selected||activePersonId;
   const person=shown.find(p=>p.id===focused);
   function selectPerson(id:string){setSelected(id);engine.current?.focus(id);engine.current?.setView('focus');setView('focus');onSelectPerson?.(id);}
   function toggleView(){const next=view==='overview'?'focus':'overview';setView(next);engine.current?.setView(next);}
-  return <section className={`spatial-stage spatial-${display} ${compact?'spatial-compact':''}`} aria-label="Palco de ensaio 3D interativo" data-renderer={display==='cinematic'?'cinematic':status} data-presenter={presenterAvatar?'profile':'default'}>
+  return <section className={`spatial-stage spatial-${display} ${compact?'spatial-compact':''}`} aria-label="Palco de ensaio 3D interativo" data-renderer={display==='cinematic'?'cinematic':status} data-presenter={presenterAvatar?'profile':'default'} data-avatar-source={avatarRender.source} data-avatar-fallback={avatarRender.fallback}>
     {(display==='cinematic'||status==='fallback')&&<img className="spatial-cinematic-art" src="/world-art/cinematic-rehearsal-stage-v2.png" alt="" aria-hidden="true"/>}
     <div className="spatial-stage-top"><span className="spatial-live"><i/>{phaseLabel}</span><span className="spatial-room-code">Seu espaço de ensaio</span></div>
     <div ref={host} className="spatial-canvas" aria-hidden="true"/>
@@ -62,6 +67,6 @@ export default function SpatialStage({people,activePersonId,onSelectPerson,phase
     <div className="spatial-cast" aria-label="Pessoas da audiência">
       {shown.length?shown.map((p,i)=><button type="button" key={p.id} aria-pressed={focused===p.id} className={`spatial-person ${focused===p.id?'is-active':''}`} onClick={()=>selectPerson(p.id)}><span className="spatial-person-number">0{i+1}</span><span><strong>{p.name}</strong><small>{p.role}</small></span>{activePersonId===p.id&&<i aria-label="Pergunta atual"/>}</button>):<p className="spatial-empty-cast">Seu palco está preparado. Adicione uma audiência para começar.</p>}
     </div>
-    <div className="spatial-stage-foot"><span>{display==='cinematic'?'Cenário ilustrativo · perfis definidos pelos seus materiais':'Cena 3D · elenco definido pelos seus materiais'}</span><span>Ensaio, não previsão.</span></div>
+    <div className="spatial-stage-foot"><span>{display==='cinematic'?'Cenário ilustrativo · perfis definidos pelos seus materiais':avatarRender.fallback?'Modelo 3D indisponível · avatar personalizável em uso':'Cena 3D · elenco definido pelos seus materiais'}</span><span>Ensaio, não previsão.</span></div>
   </section>;
 }

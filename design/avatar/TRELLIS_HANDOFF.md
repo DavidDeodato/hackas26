@@ -1,7 +1,19 @@
 # Avatar TRELLIS — handoff
 
-Estado: PARTIAL_SUCCESS. GLB entregue em 12/09/2026 às 17:40:09 UTC; documentação consolidada às 17:42:21 UTC. Gerações encerradas, sem retry da cota.
-Dono: IMAGENS. Escopo: arquivos gerados e documentação; nenhum App, renderer, login ou cena modificado.
+Estado atual: TWO_ASSETS_READY, integração e gravação em andamento. Às 17:52 UTC de 12/09/2026, o usuário forneceu o segundo GLB e pediu integrar ambos em até dez minutos. IMAGENS validou e copiou o arquivo; ROOT8 coordena contrato/perfil, SHELL loader/preview, coordinator4 palco e QA/VIDEO o fluxo real. Nenhum renderer foi editado por IMAGENS.
+
+## Atualização — segundo GLB fornecido pelo usuário
+
+- `public/avatar/generated/trellis-masculine-v1.glb`: 1.283.312 bytes, SHA256 `bc3124ebea3743a02c0a5882e8225d0e0c5e0bccad348c35b9682488f71ce520`, GLB2 íntegro, 4.564 triângulos, 3.305 vértices, uma malha/material, PNG 1024×1024 embutido, UV, sem normais exportadas, sem skins/animações/dependências externas/extensões obrigatórias.
+- Arquivo original preservado em `C:/Users/lucas/Downloads/sample.glb`; cópia idêntica por SHA256. Papel masculino inferido do contexto do envio; aparência final exige QA no renderer. Parâmetros desta geração pelo usuário não foram observados.
+- Bounds: x [-0,244585; 0,243423], y [-0,499129; 0,499863], z [-0,101208; 0,104489]. Normalizar altura e assentar os pés; gerar normais no loader se necessário.
+- Evidências: `trellis-masculine-validation.json` e `../../public/avatar/generated/trellis-masculine-v1.provenance.json`.
+- Gate de integração: visualizar os dois GLBs reais no perfil, salvar escolha, manter após reload e ver no apresentador do palco; QA também confere erro runtime/rede. VIDEO foi acionado diretamente para registrar fluxo novo após esse gate.
+- Limite preservado: GLBs monolíticos não oferecem troca isolada de cabelo/roupas nem animação corporal. Editor procedural pode coexistir como opção separada.
+
+## Histórico da geração automática — supersedido quanto ao segundo arquivo
+
+Estado anterior: PARTIAL_SUCCESS, feminino entregue às 17:40:09 UTC; documentação consolidada às 17:42:21 UTC. Gerações automáticas encerradas sem retry da cota.
 
 ## Entregas reais
 
@@ -13,7 +25,7 @@ Dono: IMAGENS. Escopo: arquivos gerados e documentação; nenhum App, renderer, 
 - [Tentativa feminina](trellis-feminine-attempt.json), [tentativa masculina](trellis-masculine-attempt.json) e [script reproduzível](try_trellis_free.py).
 - [Prompts de referência](PROMPTS.md) e [proveniência](../../public/avatar/generated/trellis-feminine-v1.provenance.json).
 
-O masculino não tem GLB. Não substituir sua referência PNG por alegação de modelo gerado.
+Na tentativa automática abaixo, o masculino não teve GLB. A entrega manual posterior acima supersede esse bloqueio; a referência PNG continua não sendo prova do renderer final.
 
 ## Disponibilidade e execução
 

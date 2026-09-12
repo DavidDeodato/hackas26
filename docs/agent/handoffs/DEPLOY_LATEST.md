@@ -1,5 +1,9 @@
 # Deploy mais recente — 12/09/2026 14:43 SP
 
+## Atualização canônica — TRELLIS integrado, 14:59 SP
+
+ROOT_READY_TRELLIS recebido; publicado `dpl_4EugVZDywe8DK1RV7V4ropVMMc7J`, READY, alias confirmado por inspect. URL imutável https://rebobina-h4h-hlmwwh1wd-potaozinho440-1103s-projects.vercel.app. Build remoto1892 PASS; público `/assets/index-BPk4bX_A.js`, GLTFLoader chunk `GLTFLoader-DhN4Iq1T.js`. HTML200, health ok/postgres, auth/me visitante null. Ambos GLBs públicos baixados e SHA256 comparados aos arquivos locais: iguais, cabeçalho glTF íntegro. Feminino1309452 bytes, masculino1283312 bytes. ROOT assume teste público de persistência do campo model; QA visual local de ambos foi condição da liberação. Sem novos cadastros/IA por este fork. Nenhum deploy concorrente iniciado nesta rodada.
+
 ## Atualização canônica — avatar V2, 14:53 SP
 
 Após READY/FREEZE do dono SHELL, publicado `dpl_DKMy9Puw2MgU1NazMGQr5NX7oc6g`. Alias real confirmado por inspect: https://rebobina-h4h.vercel.app → https://rebobina-h4h-jjuxsbvvr-potaozinho440-1103s-projects.vercel.app, READY. Build local/remoto1889 módulos, testes locais22/22 exit0. Asset público `/assets/index-DmrjZ9ey.js` corresponde ao build; HTML/asset200, health ok/postgres e auth/me visitante null. Inclui avatar refinado, default visitante e preservação de câmera do palco conforme handoffs dos donos. Nenhuma alteração de implementação/configuração/segredos/Git por este fork. QA visual público do V2 é gate separado; não atribuir capturas do bundle antigo a este novo.

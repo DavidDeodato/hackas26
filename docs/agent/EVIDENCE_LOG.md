@@ -53,3 +53,11 @@
 - Verificacao: visibilidade `PUBLIC`, remoto `origin` e branch local rastreando `origin/main`.
 - Integridade: a transcricao privada nao foi copiada; caminhos locais e padroes de segredo foram removidos ou ignorados antes do primeiro push.
 - Impacto: pesquisa, decisoes, riscos e proximos passos agora possuem URL compartilhavel e historico versionado.
+
+## EVD-20260912-010 — Base tecnica proposta do Rebobina
+
+- Fato: o usuario forneceu a pesquisa complementar do Rebobina e solicitou sua inclusao como base tecnica, com autoria Devin, na branch `Icaro-Devin`.
+- Artefato: [Pesquisa complementar: Rebobina e Hack for Humanity Sao Paulo 2026](../../research/REBOBINA_TECHNICAL_BASIS.md), vinculada a `SRC-REB-001`.
+- Proveniencia: texto e referencias recebidos nesta conversa; autoria atribuida a Devin conforme solicitado.
+- Limite: esta evidencia comprova a incorporacao documental, nao a verificacao independente das fontes, a disponibilidade do G02 ou o impacto do produto.
+- Impacto: oferece ao Codex e ao time uma base proposta para revisao, sem aprovar produto, trilha, arquitetura ou liberar os gates existentes.

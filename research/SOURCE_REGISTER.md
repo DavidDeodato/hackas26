@@ -64,3 +64,11 @@
 | SRC-JDG-013 | [Pedro Nagamine](https://br.linkedin.com/in/pedro-nagamine) | B | Iteracao, usuarios, narrativa e historia de hackathons | Perfil autoral |
 | SRC-JDG-014 | [Joao Belluzzo Neto](https://www.linkedin.com/in/bellujrb) | B/C | CTO e execucao em hackathons | Pouco material autoral acessivel; contagens de premios nao verificadas |
 | SRC-JDG-015 | [The AI Collective no LinkedIn](https://www.linkedin.com/company/aicollective/) | B | Cultura publica de live demos e Q&A | Outro formato de evento; nao e regra do H4H local |
+
+## Pesquisa complementar recebida
+
+| ID | Fonte | Nivel | Uso | Limite |
+|---|---|---:|---|---|
+| SRC-REB-001 | [Base tecnica proposta do Rebobina](REBOBINA_TECHNICAL_BASIS.md), autoria Devin, fornecida pelo usuario em 2026-09-12 | D | Enquadramento do problema, hipotese, MVP, riscos, criterios e plano de validacao | Referencias e numeros preservados, nao revalidados nesta incorporacao; G02, pesquisa de campo e impacto continuam pendentes |
+
+O nivel D registra a ausencia de revalidacao nesta incorporacao, nao uma avaliacao individual de cada veiculo citado. As referencias prioritarias e os links contextuais permanecem no documento; nao sao promovidos automaticamente a evidencia verificada do projeto.

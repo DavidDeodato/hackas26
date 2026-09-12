@@ -10,6 +10,7 @@ Este repositorio comeca pela compreensao do problema e do evento. Ainda nao ha i
 4. [Controle do projeto](docs/agent/PROJECT_CONTROL.md) — estado atual, escopo e gates.
 5. [Banco de tarefas](docs/agent/TASK_BANK.md) — o que foi concluido e qual e o proximo ciclo, ainda sem ideacao.
 6. [Evidencias](docs/agent/EVIDENCE_LOG.md) — lastro de cada afirmacao operacional.
+7. [Base tecnica proposta do Rebobina](research/REBOBINA_TECHNICAL_BASIS.md) — pesquisa complementar com autoria Devin; hipoteses, MVP, riscos e validacao pendente, sem alterar os gates do projeto.
 
 ## Regra atual
 

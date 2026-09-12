@@ -1,0 +1,28 @@
+# Segredos e configuracoes locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Arquivos locais e temporarios
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
+
+# Dependencias e builds futuros
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Materiais privados de pesquisa
+private/
+research/private/
+transcripts/private/

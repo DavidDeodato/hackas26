@@ -23,6 +23,9 @@ dist/
 build/
 coverage/
 
+# Quadros brutos temporarios da captura de video
+artifacts/demo/live-v6/
+
 # Materiais privados de pesquisa
 private/
 research/private/

@@ -2,6 +2,8 @@
 
 ## Integração GLB — 2026-09-12, 14:54 SP
 
+QA LOCAL CONFIRMADO 14:57:25 SP: `artifacts/qa/glb-ui-report.json` e `glb-ui-review.md` lidos diretamente. Doze checkpoints concluídos: ambos os modelos reais em preview/palco, source correto/fallback false, salvar/reload, desktop/mobile sem overflow, GLBs HTTP200 e zero erros. Logout entre abas também passou localmente. VIDEO liberado para gravar local. Novo deploy público e sua verificação continuam separados e sob responsabilidade do gestor/DEPLOY; este executor permanece congelado.
+
 Novo pedido do usuário retransmitido pelo ROOT8: suportar os dois avatares TRELLIS no palco e perfil. Escopo deste executor continua somente `SpatialStage.tsx` e `spatial-scene.ts`; SHELL fornece `avatar-loader.ts:createStageAvatar(T,config):Promise<Group>`, CORE mantém schema e QA verifica a experiência.
 
 Implementado: aguardar factory antes de criar WebGLRenderer; AbortSignal evita montar cena cancelada e libera geometria/material/textura do modelo tardio. Wrapper normaliza pés em y0/altura2,08 sem sobrescrever orientação/transforms internos do loader. Câmera e interlocutor escolhidos são restaurados. `data-avatar-source` recebe `userData.model`, `data-avatar-fallback` recebe `userData.loadFallback`; fallback do GLB mostra aviso explícito, separado da ilustração para falha de WebGL.

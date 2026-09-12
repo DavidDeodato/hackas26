@@ -1,0 +1,61 @@
+{
+  "at": "2026-09-12T17:25:24.466Z",
+  "base": "http://localhost:4173",
+  "checks": [
+    {
+      "check": "empty",
+      "disabled": true,
+      "hint": "Para mapear, informe nome, papel profissional, uma fonte."
+    },
+    {
+      "check": "name-only",
+      "disabled": true,
+      "hint": "Para mapear, informe papel profissional, uma fonte."
+    },
+    {
+      "check": "name-role",
+      "disabled": true,
+      "hint": "Para mapear, informe uma fonte."
+    },
+    {
+      "check": "complete",
+      "enabled": true,
+      "hint": "1 de 8 fontes selecionadas · você revisa as hipóteses."
+    },
+    {
+      "check": "disclosure-keyboard-open",
+      "open": true,
+      "sourceEditable": true
+    },
+    {
+      "check": "disclosure-keyboard-close",
+      "closed": true
+    },
+    {
+      "check": "lengths",
+      "name": "80",
+      "role": "150"
+    },
+    {
+      "check": "mobile",
+      "metrics": {
+        "width": 390,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "reduced": true
+      }
+    }
+  ],
+  "errors": [
+    "[.WebGL-0x3744020d1200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x3744020d1200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x3744020d1200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x3744020d1200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "httpFailures": [],
+  "postRequests": [],
+  "limitations": [
+    "Eight-source boundary inspected in code only; no materials created",
+    "Populated profile citations not present in this isolated context"
+  ]
+}

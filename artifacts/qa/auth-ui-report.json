@@ -1,0 +1,129 @@
+{
+  "at": "2026-09-12T17:41:38.464Z",
+  "status": "COMPLETE",
+  "syntheticAccountsCreated": 1,
+  "aiCalls": 0,
+  "checks": [
+    {
+      "check": "login-screen",
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1
+      }
+    },
+    {
+      "check": "password-toggle",
+      "visible": true
+    },
+    {
+      "check": "login-mobile",
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1
+      }
+    },
+    {
+      "check": "wrong-login",
+      "errorVisible": true
+    },
+    {
+      "check": "one-signup",
+      "success": true
+    },
+    {
+      "check": "save-profile",
+      "saved": true
+    },
+    {
+      "check": "profile-mobile",
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 2,
+        "presenter": "profile"
+      }
+    },
+    {
+      "check": "stage-profile",
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "presenter": "profile"
+      }
+    },
+    {
+      "check": "reload-stage",
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "presenter": "profile"
+      }
+    },
+    {
+      "check": "profile-reload",
+      "name": true,
+      "hair": "true",
+      "top": "true"
+    },
+    {
+      "check": "logout",
+      "loginVisible": true,
+      "stateClear": true
+    },
+    {
+      "check": "relogin",
+      "sameName": true,
+      "sameHair": "true"
+    },
+    {
+      "check": "demo-after-logout",
+      "guestLabel": "Entrar na minha conta",
+      "profileNameAbsent": true,
+      "stateClear": true
+    }
+  ],
+  "errors": [],
+  "http": [
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/login",
+      "status": 401
+    },
+    {
+      "path": "/api/auth/register",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/profile",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/logout",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/logout",
+      "status": 200
+    }
+  ]
+}

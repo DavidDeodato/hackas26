@@ -1,0 +1,15 @@
+file 'final-02-mesa-shell.png'
+duration 8
+file 'final-v3-05-cinematic-stage.png'
+duration 12
+file 'final-v3-06-explorar-3d.png'
+duration 8
+file 'final-v3-07-resposta.png'
+duration 10
+file 'final-v3-08-feedback.png'
+duration 14
+file 'final-v3-09-rebobinar.png'
+duration 10
+file 'final-02-mesa-shell.png'
+duration 8
+file 'final-02-mesa-shell.png'

@@ -1,0 +1,54 @@
+{
+  "base": "http://localhost:4173",
+  "at": "2026-09-12T17:19:54.226Z",
+  "aiCalls": 0,
+  "results": [
+    {
+      "check": "default-3d",
+      "canvas": 1
+    },
+    {
+      "check": "illustration",
+      "canvas": 0
+    },
+    {
+      "check": "return-3d",
+      "canvas": 1
+    },
+    {
+      "check": "spa-navigation",
+      "label": "Minha audiência",
+      "canvas": 1,
+      "previousCanvasDetached": true
+    },
+    {
+      "check": "spa-navigation",
+      "label": "Mesa de trabalho",
+      "canvas": 1,
+      "previousCanvasDetached": true
+    },
+    {
+      "check": "spa-navigation",
+      "label": "Meus materiais",
+      "canvas": 1,
+      "previousCanvasDetached": true
+    },
+    {
+      "check": "spa-navigation",
+      "label": "Sala de ensaio",
+      "canvas": 1,
+      "previousCanvasDetached": true
+    },
+    {
+      "check": "reduced-motion",
+      "enabled": true,
+      "canvas": 1
+    },
+    {
+      "check": "context-loss-fallback",
+      "canvas": 0,
+      "fallback": "◯\nSeu conteúdo continua disponível abaixo.",
+      "formEditable": true
+    }
+  ]
+}

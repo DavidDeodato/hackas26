@@ -1,0 +1,13 @@
+file 'final-02-mesa-shell.png'
+duration 10
+file 'final-05-spatialstage-pergunta.png'
+duration 12
+file 'final-06-resposta.png'
+duration 10
+file 'final-07-feedback.png'
+duration 14
+file 'final-08-spatialstage-close.png'
+duration 12
+file 'final-02-mesa-shell.png'
+duration 8
+file 'final-02-mesa-shell.png'

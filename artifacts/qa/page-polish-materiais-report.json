@@ -1,0 +1,96 @@
+{
+  "base": "http://localhost:4173",
+  "at": "2026-09-12T17:25:51.854Z",
+  "isolatedContext": true,
+  "aiCalls": 0,
+  "results": [
+    {
+      "name": "materiais",
+      "size": "desktop",
+      "status": 200,
+      "file": "page-polish-materiais-desktop.png",
+      "metrics": {
+        "canvas": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "renderers": [
+          "ready"
+        ],
+        "canvasGeometry": [
+          {
+            "width": 703,
+            "height": 290,
+            "rect": {
+              "x": 710.34375,
+              "y": 156.1875,
+              "width": 702.65625,
+              "height": 290,
+              "top": 156.1875,
+              "right": 1413,
+              "bottom": 446.1875,
+              "left": 710.34375
+            },
+            "host": {
+              "x": 710.34375,
+              "y": 156.1875,
+              "width": 702.65625,
+              "height": 290,
+              "top": 156.1875,
+              "right": 1413,
+              "bottom": 446.1875,
+              "left": 710.34375
+            },
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "text": "Pular para o conteúdo\nCONVERSAS QUE IMPORTAM\nSala de ensaio\nMinha audiência\nMesa de trabalho\nMeus materiais\nExplorar atendimento\nSua equipe de IA\nConheça os papéis\nV\nSeu espaço\nSalvo no banco de dados\nEnsaio, não previsão.\nSUA BIBLIOTECA\nMeus materiais.\n\nO contexto da conversa. O caminho das suas ideias.\n\nAdicionar fonte\nSEU ESPAÇO · REFERÊNCIAS\nBoas conversas têm uma base.\n\n1 material no seu espaço\n\nDiorama de uma biblioteca com estante, livros e pastas. Cenário ilustrativo, com até seis objetos representando a quantidade informada.\n1 fonte\n0 pitches e respostas\nCada revisão guarda a anterior\nTodos\n1\nFontes\n1\nPitches e respostas\n0\n01\nFontes da apresentação\n\nReferências para fundamentar o que você diz.\n\nFonte\nv1\nCondições do Café Aurora — exemplo\n\nMeu negócio é o Café Aurora. Produto: caixas de café. Estoque: 4. Prazo de entrega: 2 dias. Um cliente quer 8 caixas para amanhã (…\n\n12 de set.\nAbrir fonte\nAdicionar uma fonte\nUma referência, notas ou critérios.\nColar texto ou importar .txt\n02\nPitches e respostas\n\nDa primeira ideia à próxima versão.\n\nA próxima versão começa na mesa.\n\nTransforme suas fontes em um pitch ou resposta. Ao salvar, o material aparece aqui.\n\nIr para a mesa"
+      },
+      "errors": []
+    },
+    {
+      "name": "materiais",
+      "size": "mobile",
+      "status": 200,
+      "file": "page-polish-materiais-mobile.png",
+      "metrics": {
+        "canvas": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "renderers": [
+          "ready"
+        ],
+        "canvasGeometry": [
+          {
+            "width": 354,
+            "height": 225,
+            "rect": {
+              "x": 18,
+              "y": 352.53125,
+              "width": 354,
+              "height": 225,
+              "top": 352.53125,
+              "right": 372,
+              "bottom": 577.53125,
+              "left": 18
+            },
+            "host": {
+              "x": 18,
+              "y": 352.53125,
+              "width": 354,
+              "height": 225,
+              "top": 352.53125,
+              "right": 372,
+              "bottom": 577.53125,
+              "left": 18
+            },
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "text": "Pular para o conteúdo\nSala de ensaio\nMinha audiência\nMesa de trabalho\nMeus materiais\nSUA BIBLIOTECA\nMeus materiais.\n\nO contexto da conversa. O caminho das suas ideias.\n\nAdicionar fonte\nSEU ESPAÇO · REFERÊNCIAS\nBoas conversas têm uma base.\n\n1 material no seu espaço\n\nDiorama de uma biblioteca com estante, livros e pastas. Cenário ilustrativo, com até seis objetos representando a quantidade informada.\n1 fonte\n0 pitches e respostas\nCada revisão guarda a anterior\nTodos\n1\nFontes\n1\nPitches e respostas\n0\n01\nFontes da apresentação\n\nReferências para fundamentar o que você diz.\n\nFonte\nv1\nCondições do Café Aurora — exemplo\n\nMeu negócio é o Café Aurora. Produto: caixas de café. Estoque: 4. Prazo de entrega: 2 dias. Um cliente quer 8 caixas para amanhã (…\n\n12 de set.\nAbrir fonte\nAdicionar uma fonte\nUma referência, notas ou critérios.\nColar texto ou importar .txt\n02\nPitches e respostas\n\nDa primeira ideia à próxima versão.\n\nA próxima versão começa na mesa.\n\nTransforme suas fontes em um pitch ou resposta. Ao salvar, o material aparece aqui.\n\nIr para a mesa"
+      },
+      "errors": []
+    }
+  ]
+}

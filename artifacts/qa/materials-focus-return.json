@@ -1,0 +1,57 @@
+{
+  "at": "2026-09-12T17:34:00.516Z",
+  "base": "http://localhost:4173",
+  "aiCalls": 0,
+  "writes": 0,
+  "results": [
+    {
+      "viewport": 1440,
+      "launcher": "Adicionar fonte",
+      "closedBy": "Escape",
+      "restored": true
+    },
+    {
+      "viewport": 1440,
+      "launcher": "Abrir fonte",
+      "closedBy": "Escape",
+      "restored": true
+    },
+    {
+      "viewport": 1440,
+      "launcher": "Adicionar uma fonte",
+      "closedBy": "Escape",
+      "restored": true
+    },
+    {
+      "viewport": 1440,
+      "launcher": "Abrir fonte",
+      "closedBy": "Close button",
+      "restored": true
+    },
+    {
+      "viewport": 390,
+      "launcher": "Adicionar fonte",
+      "closedBy": "Escape",
+      "restored": true
+    },
+    {
+      "viewport": 390,
+      "launcher": "Abrir fonte",
+      "closedBy": "Escape",
+      "restored": true
+    },
+    {
+      "viewport": 390,
+      "launcher": "Adicionar uma fonte",
+      "closedBy": "Escape",
+      "restored": true
+    },
+    {
+      "viewport": 390,
+      "launcher": "Abrir fonte",
+      "closedBy": "Close button",
+      "restored": true
+    }
+  ],
+  "pageErrors": []
+}

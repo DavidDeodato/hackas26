@@ -1,0 +1,96 @@
+{
+  "base": "http://localhost:4173",
+  "at": "2026-09-12T17:30:36.394Z",
+  "isolatedContext": true,
+  "aiCalls": 0,
+  "results": [
+    {
+      "name": "audiencia",
+      "size": "desktop",
+      "status": 200,
+      "file": "page-polish-audiencia-desktop.png",
+      "metrics": {
+        "canvas": 1,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "renderers": [
+          "ready"
+        ],
+        "canvasGeometry": [
+          {
+            "width": 466,
+            "height": 195,
+            "rect": {
+              "x": 787,
+              "y": 260.765625,
+              "width": 466,
+              "height": 195,
+              "top": 260.765625,
+              "right": 1253,
+              "bottom": 455.765625,
+              "left": 787
+            },
+            "host": {
+              "x": 787,
+              "y": 260.765625,
+              "width": 466,
+              "height": 195,
+              "top": 260.765625,
+              "right": 1253,
+              "bottom": 455.765625,
+              "left": 787
+            },
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "text": "Pular para o conteúdo\nSEU ESTÚDIO\nEnsaio\nSala de ensaio\nAudiência\nMinha audiência\nMesa\nMesa de trabalho\nMateriais\nMeus materiais\nAtendimento\nSua equipe\nOs papéis da IA\nSeu espaço\nSalvo no banco\nEnsaio, não previsão.\nPREPARE-SE PARA QUEM VAI OUVIR\nMapear audiência.\n\nUse evidências profissionais para antecipar lentes de avaliação — sem tentar prever pessoas.\n\n01\nQuem participa?\n\nIdentifique a pessoa e o papel relevante nesta apresentação.\n\nNome\nPapel profissional\n02\nQuais fontes sustentam o ensaio?\n\nSelecione materiais já salvos. O mapeamento só usa essas fontes.\n\nCondições do Café Aurora — exemplo\nFonte de contexto · versão 1\nColar uma nova fonte\nMapear lentes profissionais\n\nPara mapear, informe nome, papel profissional, uma fonte.\n\nSEU ESPAÇO · AUDIÊNCIA\nSua roda de audiência\n\nSua próxima conversa começa aqui.\n\nDiorama de cadeiras em roda com figuras de ensaio. Cenário ilustrativo, com até seis objetos representando a quantidade informada.\nAudiências salvas\n0 perfis\nInforme nome, papel e fontes para criar seu primeiro perfil. As lentes, citações e limitações ficarão salvas aqui."
+      },
+      "errors": []
+    },
+    {
+      "name": "audiencia",
+      "size": "mobile",
+      "status": 200,
+      "file": "page-polish-audiencia-mobile.png",
+      "metrics": {
+        "canvas": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "renderers": [
+          "ready"
+        ],
+        "canvasGeometry": [
+          {
+            "width": 354,
+            "height": 210,
+            "rect": {
+              "x": 18,
+              "y": 967.09375,
+              "width": 354,
+              "height": 210,
+              "top": 967.09375,
+              "right": 372,
+              "bottom": 1177.09375,
+              "left": 18
+            },
+            "host": {
+              "x": 18,
+              "y": 967.09375,
+              "width": 354,
+              "height": 210,
+              "top": 967.09375,
+              "right": 372,
+              "bottom": 1177.09375,
+              "left": 18
+            },
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "text": "Pular para o conteúdo\nEnsaio\nSala de ensaio\nAudiência\nMinha audiência\nMesa\nMesa de trabalho\nMateriais\nMeus materiais\nPREPARE-SE PARA QUEM VAI OUVIR\nMapear audiência.\n\nUse evidências profissionais para antecipar lentes de avaliação — sem tentar prever pessoas.\n\n01\nQuem participa?\n\nIdentifique a pessoa e o papel relevante nesta apresentação.\n\nNome\nPapel profissional\n02\nQuais fontes sustentam o ensaio?\n\nSelecione materiais já salvos. O mapeamento só usa essas fontes.\n\nCondições do Café Aurora — exemplo\nFonte de contexto · versão 1\nColar uma nova fonte\nMapear lentes profissionais\n\nPara mapear, informe nome, papel profissional, uma fonte.\n\nSEU ESPAÇO · AUDIÊNCIA\nSua roda de audiência\n\nSua próxima conversa começa aqui.\n\nDiorama de cadeiras em roda com figuras de ensaio. Cenário ilustrativo, com até seis objetos representando a quantidade informada.\nAudiências salvas\n0 perfis\nInforme nome, papel e fontes para criar seu primeiro perfil. As lentes, citações e limitações ficarão salvas aqui."
+      },
+      "errors": []
+    }
+  ]
+}

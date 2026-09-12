@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "video": "rebobina-demo-3d-v5-narrado-legendado.mp4",
+  "duration": 79.966667,
+  "bytes": 3972535,
+  "sha256": "aef5be0dbc6835fa608d1a1767e403528b7346209b485a82888cbe15a033b0f7",
+  "videoStream": {
+    "codec": "h264",
+    "width": 1600,
+    "height": 900,
+    "fps": 30,
+    "frames": 2399,
+    "start": 0,
+    "sar": "1:1",
+    "dar": "16:9"
+  },
+  "audioStream": {
+    "codec": "aac",
+    "sampleRate": 96000,
+    "channels": 1,
+    "start": 0,
+    "duration": 79.959,
+    "copiedFrom": "rebobina-demo-3d-v4-narrado.mp4",
+    "packetPayloadSHA256": "fd1f6be3c42c19da16f09d1b5c5c2640ac5afb834dae470a3c61a5d07d72f73e",
+    "samePayloadAsV4": true
+  },
+  "encodingExitCode": 0,
+  "fullDecodeExitCode": 0,
+  "captions": {
+    "words": 176,
+    "cues": 29,
+    "maxLines": 2,
+    "maxCharactersPerLine": 42,
+    "maxCharactersPerSecond": 19.205298013245024,
+    "overlaps": 0,
+    "burnedIn": true,
+    "source": "rebobina-demo-3d-v5-ptbr.srt",
+    "timingMethod": "offline faster-whisper small and silence boundaries; spelling from exact TTS input"
+  },
+  "visualQA": {
+    "extractedSeconds": [
+      12,
+      33,
+      51,
+      68
+    ],
+    "inspectedSeconds": [
+      33,
+      51,
+      68
+    ],
+    "quoteBelongsTo": "question",
+    "reviewVersion": 2,
+    "reviewPersistedAfterReload": true,
+    "previousVersionSelectable": true
+  },
+  "classification": "montage of actual local app captures using synthetic demonstration material",
+  "voicePatch": {
+    "speedFactor": 1.3884,
+    "words": 53,
+    "windowSeconds": 20,
+    "wordsPerMinute": 159
+  },
+  "limitations": [
+    "Not continuous screen recording",
+    "No human listening audit claimed",
+    "Fixture is not official event evidence",
+    "Official submission duration limit remains unconfirmed"
+  ]
+}

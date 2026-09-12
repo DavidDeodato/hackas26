@@ -18,6 +18,35 @@
 | SRC-EVT-005 | [Rubrica SCU](https://hack-for-humanity-2026.devpost.com/rules) | C | Comparacao de redacao | Outro organizador; proibido importar como regra local |
 | SRC-EVT-006 | Transcricao privada fornecida pelo time | B | Fala de Fabiola sobre trilhas, funcionalidade e video | Transcricao automatica com ruido; original nao publicado |
 | SRC-EVT-007 | Texto do formulario copiado pelo time | B | Quatro trilhas e pesos de 25% | Formulario integral e URL nao disponiveis |
+| SRC-INS-001 | [Trust in the Age of Acceleration](https://www.aicollective.com/files/Trust%20in%20the%20Age%20of%20Acceleration.pdf) | A | Origem, missao, nonprofit, comunidade, Institute e Investments | Documento de perspectiva da propria organizacao |
+| SRC-INS-002 | [The AI Collective Institute](https://institute.aicollective.com/about) | A | Participacao, governanca, accountability e confianca publica | Declaracao institucional |
+| SRC-INS-003 | [Collective Investments](https://investments.aicollective.com/about) | A | Conexao entre founders e capital | Metricas e resultados sao autorrelatados |
+| SRC-INS-004 | [Retrospecto 2025](https://newsletter.aicollective.com/p/2025-retrospective-the-year-the-ai) | B | Comunidade, eventos, formacao de times e empresas | Metricas autorrelatadas |
+| SRC-INS-005 | [Inside This Week: Learning in Sao Paulo](https://newsletter.aicollective.com/p/inside-this-week-learning-in-sao) | B | Resultado sobre piloto, dados/produto e governanca minima seria | Sintese editorial, nao rubrica do H4H |
+| SRC-INS-006 | [The AI Collective no LinkedIn](https://www.linkedin.com/company/aicollective/) | B | Enquadramento H4H, demo curta, inclusao e cultura de live demo | Feed mutavel e promocional |
+
+## Precedentes da propria The AI Collective
+
+| ID | Fonte | Nivel | Uso | Limite |
+|---|---|---:|---|---|
+| SRC-PRC-001 | [AI for Learning & Development Build Challenge](https://ai-challenge-regent-aichr.devpost.com/) | A/B | Rubrica e formato de desafio do capitulo Hampton Roads | Nao e o H4H Sao Paulo |
+| SRC-PRC-002 | [Galeria do desafio](https://ai-challenge-regent-aichr.devpost.com/project-gallery) | A/B | Vencedores e merit awards | Posicao exata de Lettuce nao confirmada |
+| SRC-PRC-003 | [SOLTutor.ai](https://devpost.com/software/soltutor-ai) | B | 1o lugar; problema, fluxo, acessibilidade e fallback | Descricao autoral da equipe |
+| SRC-PRC-004 | [IEPrep](https://devpost.com/software/ieprep) | B | 2o lugar; insider knowledge e workflow concreto | Descricao autoral da equipe |
+| SRC-PRC-005 | [Lettuce Talk About AI](https://devpost.com/software/lettuce-talk-about-ai) | B | Co-design, offline, privacidade e letramento | Galeria marca Winner; colocacao nao confirmada |
+| SRC-PRC-006 | [Career Strategist Pro](https://devpost.com/software/career-strategist-pro) | B | Merit Award; framework acionavel para transicao | Descricao autoral da equipe |
+| SRC-PRC-007 | [Newsletter da The AI Collective](https://newsletter.aicollective.com/) | B | Demo nights, categorias e cultura institucional | Eventos gerais; nem todos possuem tema social |
+| SRC-PRC-008 | [AI for the Planet Demo Night](https://www.linkedin.com/posts/jermiah-jerome_aifortheplanet-changenow-startups-activity-7448768653120016384-_OWJ) | B | AquaDeep, Enverge.ai e Cirkular | Post de organizador; voto comunitario, nao banca H4H |
+| SRC-PRC-009 | [Demo Night com Product Hunt](https://www.linkedin.com/posts/aicollective_we-made-sf-tech-history-at-yesterdays-activity-7270534709917425664-ZGVW) | B | Coval, Boundary e CommonAR | Evento geral e voto comunitario |
+| SRC-PRC-010 | [SF Demo Night de setembro de 2025](https://www.linkedin.com/posts/aicollective_building-on-our-momentum-we-had-an-amazing-activity-7370128687125467136-el-Y) | B | Ito, CMUX e Cupidly | Evento geral e voto comunitario |
+| SRC-PRC-011 | [SF Demo Night #16](https://www.linkedin.com/posts/aicollective_sf-demo-night-was-a-movie-last-night-activity-7430348180300566528-Wgnl) | B | GlamAI, Autonoma AI e Sticker Camera | Evento geral e voto comunitario |
+
+## Homonimos excluidos como precedente
+
+| ID | Fonte | Nivel | Uso | Limite |
+|---|---|---:|---|---|
+| SRC-X-001 | [Hack for Humanity 2026 da Santa Clara University](https://hack-for-humanity-2026.devpost.com/) | A | Controle de homonimia | Outro organizador; vencedores nao revelam preferencia da AI Collective |
+| SRC-X-002 | [Evento independente Hack for Humanity](https://hack-for-humanity-summer-26.devpost.com/) | A | Controle de homonimia | Outro organizador e outro regulamento |
 
 ## Trilhas e contexto
 

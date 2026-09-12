@@ -1,0 +1,96 @@
+{
+  "base": "http://localhost:4173",
+  "at": "2026-09-12T17:34:35.622Z",
+  "isolatedContext": true,
+  "aiCalls": 0,
+  "results": [
+    {
+      "name": "mesa",
+      "size": "desktop",
+      "status": 200,
+      "file": "page-polish-mesa-desktop.png",
+      "metrics": {
+        "canvas": 1,
+        "width": 1280,
+        "scrollWidth": 1280,
+        "renderers": [
+          "ready"
+        ],
+        "canvasGeometry": [
+          {
+            "width": 340,
+            "height": 127,
+            "rect": {
+              "x": 436.3193664550781,
+              "y": 202.69142150878906,
+              "width": 502.8300476074219,
+              "height": 187.9600067138672,
+              "top": 202.69142150878906,
+              "right": 939.1494140625,
+              "bottom": 390.65142822265625,
+              "left": 436.3193664550781
+            },
+            "host": {
+              "x": 517.859375,
+              "y": 234.390625,
+              "width": 339.75,
+              "height": 127,
+              "top": 234.390625,
+              "right": 857.609375,
+              "bottom": 361.390625,
+              "left": 517.859375
+            },
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "text": "Pular para o conteúdo\nSEU ESTÚDIO\nEnsaio\nSala de ensaio\nAudiência\nMinha audiência\nMesa\nMesa de trabalho\nMateriais\nMeus materiais\nAtendimento\nSua equipe\nOs papéis da IA\nSeu espaço\nSalvo no banco\nEnsaio, não previsão.\nPREPARE, ENSAIE, REBOBINE\nMesa de trabalho.\n\nConstrua seu pitch e revise respostas com apoio das fontes.\n\nConversar\nPreparar\nORIENTADOR\nSEU ESPAÇO · CRIAÇÃO\nSua mesa de criação\n\nUma mesa para preparar o que importa.\n\nDiorama de uma mesa de madeira com computador, luminária e cadernos. Cenário ilustrativo, com até seis objetos representando a quantidade informada.\n\nPrepare o que importa. Encontre as palavras antes de entrar na sala.\n\nPreparar um pitch\nRevisar uma resposta\nEncontrar lacunas\nFontes selecionadas\n1\nSeu pedido\nPreparar salva seu primeiro material.\nPreparar\nPitch e respostas\nSeu pitch começa aqui.\n\nUse Preparar para transformar suas ideias na primeira versão.\n\nDepois, leve ao ensaio.\nOutros tipos de conversa"
+      },
+      "errors": []
+    },
+    {
+      "name": "mesa",
+      "size": "mobile",
+      "status": 200,
+      "file": "page-polish-mesa-mobile.png",
+      "metrics": {
+        "canvas": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "renderers": [
+          "ready"
+        ],
+        "canvasGeometry": [
+          {
+            "width": 167,
+            "height": 126,
+            "rect": {
+              "x": 165.9679718017578,
+              "y": 199.359619140625,
+              "width": 217.07969665527344,
+              "height": 163.79998779296875,
+              "top": 199.359619140625,
+              "right": 383.04766845703125,
+              "bottom": 363.15960693359375,
+              "left": 165.9679718017578
+            },
+            "host": {
+              "x": 191.015625,
+              "y": 219.015625,
+              "width": 166.984375,
+              "height": 126,
+              "top": 219.015625,
+              "right": 358,
+              "bottom": 345.015625,
+              "left": 191.015625
+            },
+            "display": "block",
+            "visibility": "visible"
+          }
+        ],
+        "text": "Pular para o conteúdo\nEnsaio\nSala de ensaio\nAudiência\nMinha audiência\nMesa\nMesa de trabalho\nMateriais\nMeus materiais\nPREPARE, ENSAIE, REBOBINE\nMesa de trabalho.\n\nConstrua seu pitch e revise respostas com apoio das fontes.\n\nConversar\nPreparar\nORIENTADOR\nSEU ESPAÇO · CRIAÇÃO\nSua mesa de criação\n\nUma mesa para preparar o que importa.\n\nDiorama de uma mesa de madeira com computador, luminária e cadernos. Cenário ilustrativo, com até seis objetos representando a quantidade informada.\n\nPrepare o que importa. Encontre as palavras antes de entrar na sala.\n\nPreparar um pitch\nRevisar uma resposta\nEncontrar lacunas\nFontes selecionadas\n1\nSeu pedido\nPreparar salva seu primeiro material.\nPreparar\nPitch e respostas\nSeu pitch começa aqui.\n\nUse Preparar para transformar suas ideias na primeira versão.\n\nDepois, leve ao ensaio.\nOutros tipos de conversa"
+      },
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "masculine",
+  "space": "trellis-community/TRELLIS",
+  "authenticated": false,
+  "status": "failed",
+  "events": [
+    {
+      "endpoint": "start_session",
+      "event_id": "513c51b1b48f414ba3232b155b10620e"
+    },
+    {
+      "endpoint": "preprocess_image",
+      "event_id": "ccc9333a58844824bebf745e86ed5e09"
+    },
+    {
+      "endpoint": "generate_and_extract_glb",
+      "event_id": "0bc6e4f46dff4c1b82627eb7dca9c1be"
+    }
+  ],
+  "generation_parameters": [
+    "image",
+    "multiimages",
+    "seed",
+    "ss_guidance_strength",
+    "ss_sampling_steps",
+    "slat_guidance_strength",
+    "slat_sampling_steps",
+    "multiimage_algo",
+    "mesh_simplify",
+    "texture_size"
+  ],
+  "error": "Space returned error: {\"error\": \"You have exceeded your ZeroGPU quota (120s requested vs. 0s left). Try again in 23:59:59. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens\", \"duration\": 10, \"visible\": true, \"title\": \"ZeroGPU quota exceeded\"}"
+}

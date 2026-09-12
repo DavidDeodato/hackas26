@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebobina — kit de marca</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Manrope:wght@700;800&display=swap');
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 48px; color: #2e3933; background: #f7f8f3; font-family: 'DM Sans', Arial, sans-serif; }
+    main { max-width: 920px; margin: auto; }
+    h1 { margin: 0 0 8px; font: 800 32px/1.2 Manrope, sans-serif; }
+    p { margin: 0 0 32px; color: #657169; }
+    .grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 20px; }
+    section { min-height: 210px; padding: 28px; border: 1px solid #e5e8df; border-radius: 16px; background: #fffefa; }
+    h2 { margin: 0 0 28px; font: 700 13px/1.2 Manrope, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .main-logo { width: min(100%, 438px); height: auto; }
+    .symbols { display: flex; align-items: end; gap: 20px; }
+    .symbols figure { margin: 0; text-align: center; font-size: 11px; color: #657169; }
+    .symbols img { display: block; margin: 0 auto 8px; }
+    .dark { color: #f2f6f4; background: #070a0d; border-color: #17232a; }
+    .dark h2 { color: #e6edc5; }
+    .tagline { margin-top: 40px; font: 700 26px/1.35 Manrope, sans-serif; }
+    .tagline span { color: #52705f; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Kit de marca Rebobina</h1>
+    <p>Ensaio, resposta e uma nova tentativa — sem prometer prever pessoas.</p>
+    <div class="grid">
+      <section>
+        <h2>Logo principal</h2>
+        <img class="main-logo" src="../../public/brand/rebobina-logo-horizontal.svg" alt="Rebobina">
+        <div class="tagline">Ensaie. Responda. <span>Rebobine.</span></div>
+      </section>
+      <section>
+        <h2>Reducao</h2>
+        <div class="symbols">
+          <figure><img src="../../public/brand/rebobina-symbol.svg" width="64" height="64" alt=""><figcaption>64 px</figcaption></figure>
+          <figure><img src="../../public/brand/rebobina-symbol.svg" width="32" height="32" alt=""><figcaption>32 px</figcaption></figure>
+          <figure><img src="../../public/brand/rebobina-symbol.svg" width="16" height="16" alt=""><figcaption>16 px</figcaption></figure>
+        </div>
+      </section>
+      <section class="dark">
+        <h2>Logo sobre fundo escuro</h2>
+        <img src="../../public/brand/rebobina-logo-horizontal-dark.svg" width="438" alt="Rebobina para fundo escuro">
+      </section>
+      <section>
+        <h2>Favicon candidato</h2>
+        <img src="../../public/brand/rebobina-favicon-candidate.svg" width="96" height="96" alt="Favicon Rebobina">
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "asset": "C:\\Users\\lucas\\Desktop\\projetos\\hackas26\\public\\avatar\\generated\\trellis-feminine-v1.glb",
+  "bytes": 1309452,
+  "sha256": "56ff0c6084e1b1c587869a52ed4a619cd910663ffe9c8d9a488ffb8b572f1106",
+  "meshes": 1,
+  "nodes": 2,
+  "materials": 1,
+  "skins": 0,
+  "animations": 0,
+  "triangles": 4592,
+  "vertices": 3479,
+  "textures": [
+    {
+      "index": 0,
+      "mimeType": "image/png",
+      "width": 1024,
+      "height": 1024,
+      "embedded": true
+    }
+  ],
+  "material_names": [
+    null
+  ],
+  "has_uv": true,
+  "position_bounds": [
+    {
+      "min": [
+        -0.19987128674983978,
+        -0.4998152554035187,
+        -0.12050879001617432
+      ],
+      "max": [
+        0.20013590157032013,
+        0.49951058626174927,
+        0.12038147449493408
+      ]
+    }
+  ],
+  "external_resources": [],
+  "visual_qa": "Space preview to inspect separately; application renderer not modified or tested",
+  "space_preview": "C:\\Users\\lucas\\Desktop\\projetos\\hackas26\\design\\avatar\\trellis-feminine-space-preview.mp4",
+  "space_preview_bytes": 230712
+}

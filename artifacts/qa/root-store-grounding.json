@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "at": "2026-09-12T16:58:47.932Z",
+  "checks": [
+    "Stale revision rejected without overwriting newer workspace",
+    "Persistent session quota rejects second attempt at limit one",
+    "Live work revision labels proposals/pending instead of promoting feedback to documented functionality"
+  ],
+  "work": "Revisão honesta do pitch considerando feedback sobre moderação, conferência e cronômetro\n\nPendente de confirmação:\nO pitch atual não fornece informações específicas sobre a existência de moderação humana, conferência automatizada ou uso de cronômetro.\n\nProposta — não representa funcionalidade ou resultado confirmado:\nSugere-se que a apresentação do pitch seja transparente quanto à presença ou ausência dessas funcionalidades, destacando o que está efetivamente implementado e o que está em planejamento, para manter a honestidade diante do público.\n\nProposta — não representa funcionalidade ou resultado confirmado:\nPoderia ser incluída a menção de futuras etapas para implementação de moderação humana, conferência automatizada e cronômetro, caso sejam considerados relevantes para aprimorar o produto e atender às expectativas do público.",
+  "limitations": [
+    "Literal citation validation is not semantic truth verification",
+    "One live grounding regression, not exhaustive evaluation"
+  ]
+}

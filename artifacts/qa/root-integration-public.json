@@ -1,0 +1,27 @@
+{
+  "status": "PASS_LIVE_INTEGRATION",
+  "origin": "https://rebobina-h4h.vercel.app",
+  "at": "2026-09-12T17:13:26.269Z",
+  "checks": [
+    "PostgreSQL connected",
+    "Source persisted",
+    "Live AI audience mapping with anchored quotes",
+    "Live AI questions generated from pitch and audience",
+    "Live answer feedback",
+    "Duplicate answer rejected",
+    "Rewind preserves original; reload persists branch",
+    "Independent browser session isolated",
+    "Foreign source rejected",
+    "Work generation and immutable revision persisted"
+  ],
+  "questions": [
+    "Quais indicadores mensuráveis e relatos qualitativos já foram coletados para demonstrar que o uso do protótipo da Rebobina efetivamente melhora a aprendizagem e a performance em ensaios de apresentações?",
+    "De que forma a Rebobina diferencia claramente entre hipóteses preliminares sobre o ganho de aprendizagem e dados concretos que comprovem esse impacto na prática dos usuários?",
+    "Como a interface 2.5D e a versão alternativa em lista foram testadas com usuários inexperientes para garantir que não gerem barreiras no uso e, assim, não comprometam a efetividade e acessibilidade da ferramenta?"
+  ],
+  "limitations": [
+    "Browser QA separate",
+    "Synthetic source, real AI requests",
+    "No human learning validation"
+  ]
+}

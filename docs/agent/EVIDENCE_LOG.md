@@ -1,5 +1,27 @@
 # Log de evidencias
 
+## EVD-20260912-015 — Ciclo e probe Rebobina
+
+- Fato: geracao em dois contextos sem historico, verificacao de capacidades, pesquisa de alternativas, confronto de dois revisores e dez lentes publicas em lote.
+- Artefatos: `research/IDEATION_RUN_001.md`, `research/REBOBINA_PROPOSAL.md`.
+- Comando: `node research/experiments/rebobina-probe.mjs`.
+- Resultado observado: PASS_SYNTHETIC_MECHANISM_ONLY; 8 assercoes iniciais, 27 composicoes, replay deterministico e tratamento de dado ausente.
+- Limite: nenhuma UI, API paga/modelo ou pessoa testada. Comportamento das regras sinteticas nao e impacto no mundo real.
+
+## EVD-20260912-014 — Auditoria adversarial e segunda leitura
+
+- Fato: tres agentes revisores distintos analisaram o metodo, retornaram criticas e releram a V2; todos consideraram a revisao apta para piloto.
+- Artefatos: `research/METHOD_ADVERSARIAL_REVIEW.md`, `research/IDEA_METHOD_V2.md`.
+- Limite: papeis simulados, nao especialistas externos; casos documentais e nao validacao empirica. Ajustes finais pequenos conferidos pelo coordenador.
+- Proximo passo: medir tempo e utilidade no primeiro ciclo real de teses.
+
+## EVD-20260912-013 — Elaboracao seletiva incorporada
+
+- Fato: etapa 7A adicionada ao metodo e conectada ao funil e a Banca 1.
+- Evidencia: `research/IDEA_GENERATION_AND_SELECTION_METHOD.md`.
+- Limite: protocolo escrito; nenhuma candidata elaborada ou integrada neste ciclo.
+- Proximo passo: comparar recortes elaborados quando houver sementes selecionadas.
+
 ## EVD-20260912-001 — Evento e agenda
 
 - Fato: evento local, hosts, local, agenda, patrocinio, premios e banca.
@@ -53,3 +75,28 @@
 - Verificacao: visibilidade `PUBLIC`, remoto `origin` e branch local rastreando `origin/main`.
 - Integridade: a transcricao privada nao foi copiada; caminhos locais e padroes de segredo foram removidos ou ignorados antes do primeiro push.
 - Impacto: pesquisa, decisoes, riscos e proximos passos agora possuem URL compartilhavel e historico versionado.
+
+## EVD-20260912-010 — Identidade e vies institucional
+
+- Fato: a The AI Collective e uma nonprofit com frentes de comunidade, governanca/public interest e conexao founder-investidor; seus eventos gerais nao sao exclusivamente sociais.
+- Fontes: [perspectiva institucional](https://www.aicollective.com/files/Trust%20in%20the%20Age%20of%20Acceleration.pdf), [Institute](https://institute.aicollective.com/about), [Collective Investments](https://investments.aicollective.com/about) e [retrospecto 2025](https://newsletter.aicollective.com/p/2025-retrospective-the-year-the-ai).
+- Fato: o H4H e o recorte explicitamente civico, local, inclusivo e sem resultado comercial predefinido.
+- Fonte: [anuncio global](https://fortune.com/press-releases/ai-collective-hack-for-humanity-global-civic-hackathon-2026-08-17/) e comunicacao institucional registrada em `SRC-INS-006`.
+- Inferencia: o vies combinado favorece produto funcional, problema local, agencia humana, confianca concreta e demo legivel.
+- Impacto: futuras teses devem atender simultaneamente ao polo builder e ao polo civico.
+
+## EVD-20260912-011 — Precedentes e ausencia de historico direto
+
+- Fato: SOLTutor.ai foi 1o lugar e IEPrep 2o lugar no AI for Learning & Development Build Challenge do capitulo Hampton Roads; Lettuce Talk About AI aparece como vencedor e Career Strategist Pro recebeu Merit Award.
+- Fontes: [evento](https://ai-challenge-regent-aichr.devpost.com/), [galeria](https://ai-challenge-regent-aichr.devpost.com/project-gallery) e paginas registradas em `SRC-PRC-003` a `SRC-PRC-006`.
+- Fato: nao foi localizado arquivo oficial de vencedores anteriores do H4H da The AI Collective; o ciclo global de 2026 e apresentado como iniciativa nova.
+- Risco controlado: resultados da Santa Clara University e de outros eventos homonimos foram classificados como `SRC-X-*` e excluidos como precedente institucional.
+- Impacto: o desafio Hampton Roads e o comparavel mais forte, mas nao substitui a rubrica de Sao Paulo.
+
+## EVD-20260912-012 — Metodo de ideacao proposto
+
+- Fato: existe um protocolo escrito para gerar teses diversas, eliminar falhas fatais, pesquisar semifinalistas, aplicar a rubrica, testar palco e usar dez lentes sinteticas da banca.
+- Fonte: `research/IDEA_GENERATION_AND_SELECTION_METHOD.md`.
+- Verificacao: o protocolo explicita entradas, gates, scorecards, vieses, papeis, saida e criterio de pronto.
+- Limite: ainda aguarda validacao; nenhuma tese foi executada ou avaliada.
+- Impacto: o ciclo pode ser reproduzivel e auditavel, em vez de depender da primeira intuicao.

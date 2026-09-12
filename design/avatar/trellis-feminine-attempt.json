@@ -1,0 +1,82 @@
+{
+  "kind": "feminine",
+  "space": "trellis-community/TRELLIS",
+  "authenticated": false,
+  "status": "glb_downloaded_not_visually_approved",
+  "events": [
+    {
+      "endpoint": "start_session",
+      "event_id": "63a4043505c3440891cb6ef595c674ba"
+    },
+    {
+      "endpoint": "preprocess_image",
+      "event_id": "5c300e21aa00428795d326087bef35f6"
+    },
+    {
+      "endpoint": "generate_and_extract_glb",
+      "event_id": "f71947febbad4b8a98298029cd71a68e"
+    }
+  ],
+  "generation_parameters": [
+    "image",
+    "multiimages",
+    "seed",
+    "ss_guidance_strength",
+    "ss_sampling_steps",
+    "slat_guidance_strength",
+    "slat_sampling_steps",
+    "multiimage_algo",
+    "mesh_simplify",
+    "texture_size"
+  ],
+  "result": [
+    null,
+    {
+      "video": {
+        "path": "/tmp/gradio/a06fd1f0412be53df4ebd8823f9727e49c798da7ecfdd333aadc5f2459dab30f/sample.mp4",
+        "url": "https://trellis-community-trellis.hf.space/gradio_api/file=/tmp/gradio/a06fd1f0412be53df4ebd8823f9727e49c798da7ecfdd333aadc5f2459dab30f/sample.mp4",
+        "size": null,
+        "orig_name": "sample.mp4",
+        "mime_type": null,
+        "is_stream": false,
+        "meta": {
+          "_type": "gradio.FileData"
+        }
+      },
+      "subtitles": null
+    },
+    {
+      "path": "/tmp/gradio/5e088ecbcdcc459aa5cdc0fa462272fed5853952653a0502b1a95bca554f29bb/sample.glb",
+      "url": "https://trellis-community-trellis.hf.space/gradio_api/file=/tmp/gradio/5e088ecbcdcc459aa5cdc0fa462272fed5853952653a0502b1a95bca554f29bb/sample.glb",
+      "size": null,
+      "orig_name": "sample.glb",
+      "mime_type": null,
+      "is_stream": false,
+      "meta": {
+        "_type": "gradio.FileData"
+      }
+    },
+    {
+      "path": "/tmp/gradio/5e088ecbcdcc459aa5cdc0fa462272fed5853952653a0502b1a95bca554f29bb/sample.glb",
+      "url": "https://trellis-community-trellis.hf.space/gradio_api/file=/tmp/gradio/5e088ecbcdcc459aa5cdc0fa462272fed5853952653a0502b1a95bca554f29bb/sample.glb",
+      "size": null,
+      "orig_name": "sample.glb",
+      "mime_type": null,
+      "is_stream": false,
+      "meta": {
+        "_type": "gradio.FileData"
+      }
+    }
+  ],
+  "path": "C:\\Users\\lucas\\Desktop\\projetos\\hackas26\\public\\avatar\\generated\\trellis-feminine-v1.glb",
+  "metrics": {
+    "bytes": 1309452,
+    "sha256": "56ff0c6084e1b1c587869a52ed4a619cd910663ffe9c8d9a488ffb8b572f1106",
+    "meshes": 1,
+    "nodes": 2,
+    "skins": 0,
+    "animations": 0,
+    "materials": 1,
+    "textures": 1
+  }
+}

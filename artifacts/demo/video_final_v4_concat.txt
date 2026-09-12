@@ -1,0 +1,16 @@
+file 'final-02-mesa-shell.png'
+duration 8
+file 'final-v4-03-3d-principal.png'
+duration 12
+file 'final-v4-04-3d-aproximado.png'
+duration 8
+file 'final-v4-05-resposta.png'
+duration 10
+file 'final-v4-06-feedback.png'
+duration 14
+file 'final-v4-07-rebobinar.png'
+duration 10
+file 'final-02-mesa-shell.png'
+duration 8
+file 'final-02-mesa-shell.png'
+

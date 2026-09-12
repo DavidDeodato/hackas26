@@ -100,3 +100,11 @@
 - Verificacao: o protocolo explicita entradas, gates, scorecards, vieses, papeis, saida e criterio de pronto.
 - Limite: ainda aguarda validacao; nenhuma tese foi executada ou avaliada.
 - Impacto: o ciclo pode ser reproduzivel e auditavel, em vez de depender da primeira intuicao.
+
+## EVD-20260912-016 — Base tecnica proposta do Rebobina
+
+- Fato: o usuario forneceu a pesquisa complementar do Rebobina e solicitou sua inclusao como base tecnica, com autoria Devin, na branch `Icaro-Devin`.
+- Artefato: [Pesquisa complementar: Rebobina e Hack for Humanity Sao Paulo 2026](../../research/REBOBINA_TECHNICAL_BASIS.md), vinculada a `SRC-REB-001`.
+- Proveniencia: texto e referencias recebidos nesta conversa; autoria atribuida a Devin conforme solicitado.
+- Limite: esta evidencia comprova a incorporacao documental, nao a verificacao independente das fontes, a disponibilidade do G02 ou o impacto do produto.
+- Impacto: oferece ao Codex e ao time uma base proposta para revisao, sem aprovar produto, trilha, arquitetura ou liberar os gates existentes.

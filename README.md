@@ -14,7 +14,14 @@ Este repositorio comeca pela compreensao do problema e do evento. Ainda nao ha i
 6. [Controle do projeto](docs/agent/PROJECT_CONTROL.md) — estado atual, escopo e gates.
 7. [Banco de tarefas](docs/agent/TASK_BANK.md) — o que foi concluido e qual e o proximo ciclo, ainda sem ideacao.
 8. [Evidencias](docs/agent/EVIDENCE_LOG.md) — lastro de cada afirmacao operacional.
+9. [Base tecnica proposta do Rebobina](research/REBOBINA_TECHNICAL_BASIS.md) — pesquisa complementar com autoria Devin; hipoteses, MVP, riscos e validacao pendente, sem alterar os gates do projeto.
 
 ## Regra atual
 
 O ciclo de ideacao foi autorizado e executado. Rebobina e a recomendacao apresentada para construcao; escopo e gates estao no contrato. Nenhum resultado de usuario ou integracao ao vivo pode ser presumido a partir da proposta.
+
+## Licenca e acesso publico
+
+Este repositorio e **publico** e o projeto e disponibilizado sob a **licenca MIT**. Consulte o texto completo em [LICENSE](LICENSE).
+
+Os conteudos de terceiros citados nas pesquisas permanecem sujeitos aos direitos e licencas de seus respectivos titulares.

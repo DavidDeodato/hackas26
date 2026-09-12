@@ -1,0 +1,20 @@
+const {chromium}=require('C:/Users/lucas/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs/promises');
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ const context=await browser.newContext({viewport:{width:1280,height:720}});
+ const page=await context.newPage();const errors=[],checks=[];
+ page.on('pageerror',e=>errors.push(String(e)));
+ page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+ await page.goto('http://localhost:4173/mesa',{waitUntil:'networkidle'});
+ await page.locator('[data-renderer="ready"]').waitFor();await page.waitForTimeout(500);
+ await page.screenshot({path:'artifacts/qa/mesa-resize-desktop.png'});
+ await page.setViewportSize({width:390,height:844});await page.waitForTimeout(1200);
+ checks.push({phase:'resize',data:await page.evaluate(()=>({width:innerWidth,height:innerHeight,canvas:document.querySelectorAll('canvas').length,status:document.querySelector('[data-renderer]').getAttribute('data-renderer'),rect:document.querySelector('canvas').getBoundingClientRect().toJSON()}))});
+ await page.screenshot({path:'artifacts/qa/mesa-resize-mobile.png'});
+ await page.reload({waitUntil:'networkidle'});await page.waitForTimeout(1200);
+ checks.push({phase:'reload',data:await page.evaluate(()=>({canvas:document.querySelectorAll('canvas').length,status:document.querySelector('[data-renderer]').getAttribute('data-renderer')}))});
+ await page.screenshot({path:'artifacts/qa/mesa-resize-mobile-reload.png'});
+ await fs.writeFile('artifacts/qa/mesa-resize-report.json',JSON.stringify({at:new Date().toISOString(),errors,checks,aiCalls:0},null,2));
+ console.log(JSON.stringify({checks,errors}));await browser.close();
+})().catch(e=>{console.error(e);process.exitCode=1;});

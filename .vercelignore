@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+private
+research
+docs
+design
+public/vendor
+artifacts
+tests
+scripts
+node_modules
+.codex
+*.log

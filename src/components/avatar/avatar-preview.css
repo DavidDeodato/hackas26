@@ -1,0 +1,7 @@
+.avatar-preview{position:relative;isolation:isolate;min-width:0;min-height:260px;height:340px;overflow:hidden;border:1px solid rgba(231,211,187,.14);border-radius:24px;background:radial-gradient(ellipse at 50% 36%,rgba(184,132,85,.12),transparent 66%),linear-gradient(145deg,#24221e,#131515);color:#eee5d8}
+.avatar-preview__canvas{width:100%;height:100%;min-height:inherit;touch-action:pan-y}
+.avatar-preview__canvas canvas{display:block;width:100%;height:100%}
+.avatar-preview__label{position:absolute;left:18px;top:17px;font-size:10px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:#c7ac8e;pointer-events:none}
+.avatar-preview__fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:30px;color:#c5b9aa;font-size:12px;line-height:1.6;pointer-events:none}
+.avatar-preview__fallback>span{font-size:50px;color:#dfac81}.avatar-preview__fallback p{max-width:240px;margin:0}
+@media(max-width:600px){.avatar-preview{height:290px;min-height:240px;border-radius:20px}}

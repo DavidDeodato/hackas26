@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Simbolo Rebobina</title>
+  <desc id="desc">Uma seta de retorno forma um balao de conversa, representando ensaio e uma nova tentativa.</desc>
+  <rect width="64" height="64" rx="18" fill="#304e3e"/>
+  <path d="M18 20.5A18 18 0 1 1 19.5 43" fill="none" stroke="#e6edc5" stroke-width="6" stroke-linecap="round"/>
+  <path d="M18.5 12.5 10 21l11.5 3" fill="none" stroke="#e6edc5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.5 43 17 52l10-5" fill="none" stroke="#e6edc5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

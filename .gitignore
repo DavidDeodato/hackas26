@@ -14,6 +14,7 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+.vercel/
 
 # Dependencias e builds futuros
 node_modules/
@@ -26,3 +27,5 @@ coverage/
 private/
 research/private/
 transcripts/private/
+
+.vercel

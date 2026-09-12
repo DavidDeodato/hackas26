@@ -25,6 +25,9 @@ coverage/
 
 # Quadros brutos temporarios da captura de video
 artifacts/demo/live-v6/
+artifacts/demo/live-v6.ffconcat
+artifacts/demo/generate-pitch-v6.ts
+artifacts/demo/rebobina-pitch-v6-voz-original.mp3
 
 # Materiais privados de pesquisa
 private/

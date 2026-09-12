@@ -2,6 +2,8 @@
 
 STATUS: ready (backend e integração HTTP local verificados)
 
+Atualização TRELLIS (pedido 17:50Z): `AvatarConfig.model?` e schema aceitam somente `procedural`, `trellis-masculine`, `trellis-feminine`. `defaultAvatar` permanece sem o campo; perfis antigos continuam válidos e o frontend interpreta ausência como procedural. PATCH parcial permite trocar model, com persistência JSONB já existente; cliente não fornece URLs. Caminhos fixos dos assets pertencem à integração frontend. `npx tsc --noEmit` exit0; `npx tsx --test tests/auth.test.ts` 4/4 passaram, incluindo enum, compatibilidade legada e rejeição de URL/modelo inválido. ROOT deve reiniciar para carregar esse schema e verificar PATCH integrado; AUTH não reiniciou nem publicou. Somente shared/auth.ts, server/auth.ts, teste e este handoff alterados nesta atualização.
+
 Contrato pronto em `shared/auth.ts`: AvatarConfig, AuthUser e defaultAvatar. Endpoints: GET /api/auth/me retorna {user:null|AuthUser}; POST register {email,password,name}, POST login {email,password} retornam {user}; POST logout retorna {ok:true}; PATCH profile {name?,avatar?} retorna {user}. Senha de 10 a 128 caracteres. Cores do avatar devem ser hex #RRGGBB; avatar parcial via PATCH é aceito. Usar fetch com cookie same-origin. Frontend deve oferecer entrada explícita como visitante. Sem migração automática de dados de visitante para contas.
 
 Implementado em `server/auth.ts`, `server/index.ts`, accessor mínimo em `server/store.ts`, `shared/auth.ts` e `tests/auth.test.ts`.

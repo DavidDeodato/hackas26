@@ -1,12 +1,22 @@
 # SpatialStage — coordenador chat4
 
+## Integração GLB — 2026-09-12, 14:54 SP
+
+Novo pedido do usuário retransmitido pelo ROOT8: suportar os dois avatares TRELLIS no palco e perfil. Escopo deste executor continua somente `SpatialStage.tsx` e `spatial-scene.ts`; SHELL fornece `avatar-loader.ts:createStageAvatar(T,config):Promise<Group>`, CORE mantém schema e QA verifica a experiência.
+
+Implementado: aguardar factory antes de criar WebGLRenderer; AbortSignal evita montar cena cancelada e libera geometria/material/textura do modelo tardio. Wrapper normaliza pés em y0/altura2,08 sem sobrescrever orientação/transforms internos do loader. Câmera e interlocutor escolhidos são restaurados. `data-avatar-source` recebe `userData.model`, `data-avatar-fallback` recebe `userData.loadFallback`; fallback do GLB mostra aviso explícito, separado da ilustração para falha de WebGL.
+
+Evidência já executada: smoke Node sobre `createSpatialScene` real, factory assíncrona abortada, resultado `PASS_ABORT_BEFORE_RENDERER`; descartou texture/material/geometry, sem criar renderer. Atualização 14:55 SP: loader real, GLTFLoader vendorizado (115044 bytes), feminino (1309452 bytes) e masculino (1283312 bytes) confirmados no disco; `npx tsc --noEmit --pretty false` executado após materialização, exit0. SHELL reportou build1892PASS. `SPATIAL_GLUE_READY`, arquivos congelados. Não classificar GLBs como visíveis/verificados até QA. Publicação exclusiva do DEPLOY dedicado após READY consolidado ROOT8.
+
 ## Avatar de perfil — 2026-09-12, 14:40 SP
 
 FREEZE deste executor às14:43: QA local confirmou avatar cacheado/terracota salvo, visível no palco, mantido após reload e relogin (`auth-ui-report.json`,13checkpoints). API pública de contas/avatares passou12checks em `root-auth-public.json`. Publicação final/seguimento agora são do fork dedicado de deploy, registrado em `DEPLOY_LATEST.md`; este chat não deve retomar gestão macro ou criar writers.
 
-INTEGRADO: SpatialStage recebe `presenterAvatar?: AvatarConfig` e, quando a prop está ausente, usa `useOptionalAuth()?.user?.avatar`. O builder compartilhado `createAvatar` é aplicado somente ao apresentador; jurados/audiência não recebem atributos do usuário. Sem provider/perfil, permanece o personagem de demonstração anterior.
+INTEGRADO: SpatialStage recebe `presenterAvatar?: AvatarConfig` e, quando a prop está ausente, usa `useOptionalAuth()?.user?.avatar`. O builder compartilhado `createAvatar` é aplicado somente ao apresentador; jurados/audiência não recebem atributos do usuário. Atualização às 14:47 SP: sem provider/perfil, o apresentador também usa o builder compartilhado com `defaultAvatar`, removendo o modelo legado da experiência guest. `data-presenter` mantém a distinção entre perfil e padrão. Typecheck passou após este ajuste; publicar e verificar junto do refinamento do builder, sob responsabilidade de SHELL e do DEPLOY dedicado. Este executor não inicia outra publicação.
 
 O motor aceita PresenterFactory opcional, normaliza cada figura para 2,08 unidades, pés sobre o palco, frente +Z e movimento discreto. Salvar nova configuração recria a cena e libera a antiga; perguntas e respostas são mantidas pelo componente proprietário. `data-presenter=profile` permite verificar a integração no QA.
+
+Correção complementar de continuidade: o callback de criação restaura `selected ?? activePersonId` e `view` pelos valores mais recentes. Isso evita redefinir câmera/interlocutor quando a cena é reconstruída para trocar avatar. Typecheck passou; o novo snapshot exige o QA visual final do SHELL/DEPLOY, sem reutilizar a aprovação do bundle anterior como evidência desta alteração.
 
 Evidências: TypeScript/Vite1887 módulos e19/19 testes passaram após integração. Smoke geométrico executado com os dois modelos e quatro cabelos:8/8 variantes normalizadas com pésy0/altura2,08 e dispose concluído. Não equivale a screenshot de perfil salvo: QA browser está em execução por seu responsável. API de autenticação passou12checks reais registrados em `root-auth-local.json`; cross-tab e UI são gates separados.
 

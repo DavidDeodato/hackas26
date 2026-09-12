@@ -1,10 +1,14 @@
 # QA — Rebobina
 
-STATUS: auth_ui_local_ready_public_snapshot_in_progress
+STATUS: auth_ui_local_ready_public_snapshot_verified_cross_tab_pending
+
+## Snapshot público consolidado — 2026-09-12 17:45:32Z
+
+`artifacts/qa/auth-public-report.json` COMPLETE e `artifacts/qa/auth-public-review.md`: login + quatro rotas, desktop1280x720/mobile390x844, dez HTTP200, canvas1/renderer ready em todas, zero console/page errors/HTTP failures/overflow. Bundle público `index-DILHOC9X.js`; 3D inspecionado visualmente em todas as páginas. Zero conta/IA nova no passe público. `artifacts/qa/root-auth-public.json` PASS_AUTH_ACCOUNT_ISOLATION, 12 checks, conferido diretamente. Isso encerra a pendência histórica de snapshot público abaixo. Cross-tab logout segue PENDENTE; UI autenticada local e backend público são gates separados, ambos passaram. P2 login mobile: “respostas.Chegue” sem espaço.
 
 ## Autenticação e avatar — estado vigente
 
-`artifacts/qa/auth-ui-report.json` e `artifacts/qa/auth-ui-review.md`: 13 checkpoints locais concluídos, um cadastro sintético UI, zero IA e zero erros inesperados. Cadastro, avatar personalizado salvo, palco com perfil após reload, relogin da mesma conta e logout→demo sem nome/estado anterior passaram. PNGs login/perfil/palco desktop/mobile revisados sem P0/P1 visual. Cross-tab logout permanece PENDENTE: sessão encerrada e credencial descartada; não repetir cadastro. ROOT/coordenador avisados. Deploy público novo em verificação somente leitura, login + quatro rotas demo; o resultado substituirá a pendência histórica de snapshot.
+`artifacts/qa/auth-ui-report.json` e `artifacts/qa/auth-ui-review.md`: 13 checkpoints locais concluídos, um cadastro sintético UI, zero IA e zero erros inesperados. Cadastro, avatar personalizado salvo, palco com perfil após reload, relogin da mesma conta e logout→demo sem nome/estado anterior passaram. PNGs login/perfil/palco desktop/mobile revisados sem P0/P1 visual. Cross-tab logout permanece PENDENTE: sessão encerrada e credencial descartada; não repetir cadastro. ROOT/coordenador avisados. A verificação pública de login + quatro rotas demo foi concluída na seção acima; não inclui login de conta UI pública.
 
 ## Mesa — estado preenchido e Novo material
 

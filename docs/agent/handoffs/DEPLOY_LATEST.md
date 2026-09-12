@@ -1,5 +1,11 @@
 # Deploy mais recente — 12/09/2026 14:43 SP
 
+## Atualização canônica — avatar V2, 14:53 SP
+
+Após READY/FREEZE do dono SHELL, publicado `dpl_DKMy9Puw2MgU1NazMGQr5NX7oc6g`. Alias real confirmado por inspect: https://rebobina-h4h.vercel.app → https://rebobina-h4h-jjuxsbvvr-potaozinho440-1103s-projects.vercel.app, READY. Build local/remoto1889 módulos, testes locais22/22 exit0. Asset público `/assets/index-DmrjZ9ey.js` corresponde ao build; HTML/asset200, health ok/postgres e auth/me visitante null. Inclui avatar refinado, default visitante e preservação de câmera do palco conforme handoffs dos donos. Nenhuma alteração de implementação/configuração/segredos/Git por este fork. QA visual público do V2 é gate separado; não atribuir capturas do bundle antigo a este novo.
+
+## Histórico anterior
+
 ATUALIZAÇÃO CONFIRMADA 14:45 SP: outro fork publicou concorrentemente `dpl_Ho3yYN9KLLdXo6zs4SCbA9cB4C7T`, agora destino real do alias segundo `vercel inspect`. READY, URL imutável https://rebobina-h4h-d09esmy2t-potaozinho440-1103s-projects.vercel.app. Mesmo JS `/assets/index-DILHOC9X.js`; HTML200, health ok/postgres e auth/me visitante null conferidos novamente. Este fork não iniciou nova publicação. ROOT foi informado; resultado público de autenticação existe em `artifacts/qa/root-auth-public.json`, 17:43:10Z, separado do smoke atual.
 
 CONFIRMADO: publicação solicitada diretamente pelo usuário concluída em produção.

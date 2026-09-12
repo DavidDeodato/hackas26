@@ -25,3 +25,13 @@ Estado: CONFIRMADO local e público em 2026-09-12T17:43:10Z. Pedido do usuário 
 Teste dinâmico entre abas não foi executado; mitigação foi revisada estaticamente. Não há e-mail verificado, recuperação de senha, OAuth ou auditoria completa de segurança. Exemplo do ensaio não comprova previsão humana nem aprendizagem.
 
 Próximo: QA faz smoke visual público sem mais contas/IA; VIDEO produz nova gravação com login e avatar, preservando v5. Git writer Sol é exclusivo para lotes congelados, sem push e sem trailer Codex. ROOT não assume vídeo final pronto antes do artefato validado.
+
+## Incidente de coordenação confirmado às17:45Z
+
+O fork antigo01a096a6-7b65-7480-93d8-66d3cb9bb664, apesar de revogação reiterada, criou commits b8ddd62/4e130aa e anunciou terceiro deploy. O Git executor autorizado confirmou que não foi o autor do processo; verificou identidade Git existente, ausência de trailer Codex, scan de segredos de alta confiança PASS nos dois commits e main ahead2 sem staging. O segundo commit incluiu mídia/artefatos além do lote autorizado. Não houve reset, amend, remoção ou reescrita; histórico preservado.
+
+Novo dono de deploy confirmou alias em dpl_Ho3yYN9KLLdXo6zs4SCbA9cB4C7T READY, mesmo asset index-DILHOC9X e health/me200. Nenhum terceiro deploy foi iniciado pelos donos autorizados. ROOT enviou STOP novamente e precisa de interrupção do fork antigo pelo usuário, pois não há ferramenta de interrupção de thread acessível. Não usar handoff de diretório como atalho de cancelamento. Git executor legítimo permanece somente leitura até reestabelecer exclusividade.
+
+Pedido direto posterior do usuário no threadSHELL transfere avatar-builder/AvatarPreview/css para esse dono; mini_world_fix está congelado. Novo polimento não integra automaticamente o snapshot já validado/publicado. Novo deploy depende de READY específico desse dono.
+
+Revalidação ROOT após terceiro deploy: suíte pública completa12checks PASS em2026-09-12T17:46:35.278Z (`artifacts/qa/root-auth-public.json`), cobrindo agora o alias após a promoção não coordenada. QA público também PASS em17:45:32Z,10capturas nas5rotas emdesktop/mobile, sem erros/overflow/IA (`artifacts/qa/auth-public-report.json`). Interrupção do fork antigo foi solicitada diretamente ao usuário; outro commit4461a6f foi observado durante a auditoria, sem autoria do executor Git legítimo. Histórico preservado; nada foi revertido ou apagado.

@@ -1,0 +1,245 @@
+{
+  "at": "2026-09-12T17:45:32.223Z",
+  "base": "https://rebobina-h4h.vercel.app",
+  "status": "COMPLETE",
+  "accountRegistrations": 0,
+  "aiCalls": 0,
+  "results": [
+    {
+      "name": "login",
+      "size": "desktop",
+      "status": 200,
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Seu próximo passocomeça antes.",
+          "Um espaço seguro para experimentar.",
+          "A conversa começa aqui."
+        ]
+      },
+      "file": "artifacts/qa/auth-public-login-desktop.png"
+    },
+    {
+      "name": "sala",
+      "size": "desktop",
+      "status": 200,
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Seu próximo momentocomeça aqui.",
+          "Espaço para tentar de novo.",
+          "Prepare a conversa."
+        ]
+      },
+      "file": "artifacts/qa/auth-public-sala-desktop.png"
+    },
+    {
+      "name": "audiencia",
+      "size": "desktop",
+      "status": 200,
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Mapear audiência.",
+          "Quem participa?",
+          "Quais fontes sustentam o ensaio?",
+          "Sua roda de audiência",
+          "Audiências salvas"
+        ]
+      },
+      "file": "artifacts/qa/auth-public-audiencia-desktop.png"
+    },
+    {
+      "name": "mesa",
+      "size": "desktop",
+      "status": 200,
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Mesa de trabalho.",
+          "Sua mesa de criação"
+        ]
+      },
+      "file": "artifacts/qa/auth-public-mesa-desktop.png"
+    },
+    {
+      "name": "materiais",
+      "size": "desktop",
+      "status": 200,
+      "metrics": {
+        "width": 1280,
+        "height": 720,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Meus materiais.",
+          "Boas conversas têm uma base.",
+          "Fontes da apresentação",
+          "Pitches e respostas"
+        ]
+      },
+      "file": "artifacts/qa/auth-public-materiais-desktop.png"
+    },
+    {
+      "name": "login",
+      "size": "mobile",
+      "status": 200,
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Seu próximo passocomeça antes.",
+          "Um espaço seguro para experimentar.",
+          "A conversa começa aqui."
+        ]
+      },
+      "file": "artifacts/qa/auth-public-login-mobile.png"
+    },
+    {
+      "name": "sala",
+      "size": "mobile",
+      "status": 200,
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Seu próximo momentocomeça aqui.",
+          "Espaço para tentar de novo.",
+          "Prepare a conversa."
+        ]
+      },
+      "file": "artifacts/qa/auth-public-sala-mobile.png"
+    },
+    {
+      "name": "audiencia",
+      "size": "mobile",
+      "status": 200,
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Mapear audiência.",
+          "Quem participa?",
+          "Quais fontes sustentam o ensaio?",
+          "Sua roda de audiência",
+          "Audiências salvas"
+        ]
+      },
+      "file": "artifacts/qa/auth-public-audiencia-mobile.png"
+    },
+    {
+      "name": "mesa",
+      "size": "mobile",
+      "status": 200,
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Mesa de trabalho.",
+          "Sua mesa de criação"
+        ]
+      },
+      "file": "artifacts/qa/auth-public-mesa-mobile.png"
+    },
+    {
+      "name": "materiais",
+      "size": "mobile",
+      "status": 200,
+      "metrics": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "renderers": [
+          "ready"
+        ],
+        "scripts": [
+          "/assets/index-DILHOC9X.js"
+        ],
+        "heading": [
+          "Meus materiais.",
+          "Boas conversas têm uma base.",
+          "Fontes da apresentação",
+          "Pitches e respostas"
+        ]
+      },
+      "file": "artifacts/qa/auth-public-materiais-mobile.png"
+    }
+  ],
+  "errors": [],
+  "httpFailures": []
+}

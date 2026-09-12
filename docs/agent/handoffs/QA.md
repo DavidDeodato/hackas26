@@ -1,6 +1,10 @@
 # QA — Rebobina
 
-STATUS: auth_ui_local_ready_public_snapshot_verified_cross_tab_pending
+STATUS: glb_ui_local_pass_cross_tab_pass_new_public_deploy_pending
+
+## Dois avatares GLB — gate vigente 17:57:25Z
+
+PASS_LOCAL em `artifacts/qa/glb-ui-report.json` e `artifacts/qa/glb-ui-review.md`: doze checkpoints, ambos GLBs reais na prévia e no palco após salvar/reload, source correto/fallback=false, HTTP200 model/gltf-binary, sem erros/overflow. Controles procedurais ocultos corretamente. Um cadastro QA adicional autorizado, zero IA. Logout entre duas abas PASS; encerra a pendência histórica local abaixo. Frames dos modelos distintos e palco inspecionados; VIDEO e coordenador receberam liberação de gravação local. Novo deploy público GLB ainda precisa de gate próprio; snapshot público anterior permanece válido somente para seu bundle registrado.
 
 ## Snapshot público consolidado — 2026-09-12 17:45:32Z
 

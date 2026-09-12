@@ -1,11 +1,20 @@
 # Avatar TRELLIS — handoff
 
-Estado atual: TWO_ASSETS_READY, integração e gravação em andamento. Às 17:52 UTC de 12/09/2026, o usuário forneceu o segundo GLB e pediu integrar ambos em até dez minutos. IMAGENS validou e copiou o arquivo; ROOT8 coordena contrato/perfil, SHELL loader/preview, coordinator4 palco e QA/VIDEO o fluxo real. Nenhum renderer foi editado por IMAGENS.
+Estado atual: TWO_ASSETS_INTEGRATED_LOCAL_QA_PASS em 12/09/2026 17:57:25 UTC. O usuário forneceu o segundo GLB e pediu integrar ambos em até dez minutos. IMAGENS validou e copiou o arquivo; ROOT8 coordenou contrato/perfil, SHELL loader/preview, coordinator4 palco e QA o fluxo real. Nenhum renderer foi editado por IMAGENS.
+
+## Aceite local — 17:57 UTC
+
+- `artifacts/qa/glb-ui-report.json`: COMPLETE, ambos modelos GLB reais (fallback=false) no perfil e palco, seleção/salvar/reload, desktop1280 e mobile390 sem overflow, controles procedurais incompatíveis ocultos, logout entre abas com estado limpo, zero erros. Uma conta sintética autorizada, zero chamadas de IA.
+- `artifacts/qa/root-avatar-models-local.json`: sete checks API/GLB passaram, incluindo persistência dos três presets, rejeição de URL arbitrária e manutenção após logout/login.
+- IMAGENS inspecionou diretamente `glb-ui-trellis-feminine-preview.png` e `glb-ui-trellis-masculine-preview.png`: dois personagens distintos texturizados, inteiros, pés sobre a base. Aparência masculina do arquivo fornecido agora confirmada visualmente, não apenas inferida.
+- `npx tsc --noEmit`: exit0 após integração; publicação é gate separado do dono de deploy.
+- VIDEO foi acionado e entregou `artifacts/demo/rebobina-pitch-v6-gravacao-real.mp4`: ffprobe130,4s, H.2641600×900 e AAC,16.199.335bytes. A presença dos dois GLBs nesta gravação NÃO foi verificada; exportação começou antes do aceite GLB. Não afirmar que esse vídeo demonstra a integração GLB.
+- Próximo: ROOT verifica snapshot público; VIDEO só identifica gravação com GLBs depois de capturá-los no fluxo real. V6 entregue permanece preservada.
 
 ## Atualização — segundo GLB fornecido pelo usuário
 
 - `public/avatar/generated/trellis-masculine-v1.glb`: 1.283.312 bytes, SHA256 `bc3124ebea3743a02c0a5882e8225d0e0c5e0bccad348c35b9682488f71ce520`, GLB2 íntegro, 4.564 triângulos, 3.305 vértices, uma malha/material, PNG 1024×1024 embutido, UV, sem normais exportadas, sem skins/animações/dependências externas/extensões obrigatórias.
-- Arquivo original preservado em `C:/Users/lucas/Downloads/sample.glb`; cópia idêntica por SHA256. Papel masculino inferido do contexto do envio; aparência final exige QA no renderer. Parâmetros desta geração pelo usuário não foram observados.
+- Arquivo original preservado em `C:/Users/lucas/Downloads/sample.glb`; cópia idêntica por SHA256. Papel masculino inicialmente inferido do contexto do envio e depois confirmado na captura do renderer. Parâmetros desta geração pelo usuário não foram observados.
 - Bounds: x [-0,244585; 0,243423], y [-0,499129; 0,499863], z [-0,101208; 0,104489]. Normalizar altura e assentar os pés; gerar normais no loader se necessário.
 - Evidências: `trellis-masculine-validation.json` e `../../public/avatar/generated/trellis-masculine-v1.provenance.json`.
 - Gate de integração: visualizar os dois GLBs reais no perfil, salvar escolha, manter após reload e ver no apresentador do palco; QA também confere erro runtime/rede. VIDEO foi acionado diretamente para registrar fluxo novo após esse gate.

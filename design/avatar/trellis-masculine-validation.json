@@ -19,5 +19,5 @@
   "position_bounds": [{"min": [-0.24458545446395874, -0.49912911653518677, -0.10120803117752075], "max": [0.2434229999780655, 0.4998630881309509, 0.10448886454105377]}],
   "external_resources": [],
   "required_extensions": [],
-  "visual_qa": "Pending application renderer inspection; masculine identity inferred from delivery context, not binary metadata."
+  "visual_qa": "Confirmed in artifacts/qa/glb-ui-trellis-masculine-preview.png and glb-ui-report.json on 2026-09-12T17:57:25Z: distinct masculine textured model, full body on pedestal; real GLB selected and persisted in stage after reload without fallback."
 }

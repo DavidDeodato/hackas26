@@ -35,10 +35,10 @@
 
 ### TASK-OPS-001 — Publicar o projeto em repositorio publico
 
-- Estado: em andamento.
-- Resultado esperado: repositorio GitHub publico com a pesquisa e os registros operacionais atuais.
+- Estado: concluida.
+- Resultado: repositorio GitHub publico com a pesquisa e os registros operacionais atuais.
 - Gate: varredura sem segredo, credencial, dado pessoal privado ou caminho local identificavel.
-- Evidencia: URL publica e leitura do estado remoto apos o push.
+- Evidencia: `https://github.com/DavidDeodato/hackas26`, branch `main`, commit inicial `4aa551f` e leitura do estado remoto apos o push.
 
 ## Proximas — aguardam OK do time
 

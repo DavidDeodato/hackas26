@@ -45,3 +45,11 @@
 - Inferencia: o padrao coletivo favorece problema real, produto ponta a ponta, controle humano, acessibilidade demonstrada, arquitetura explicavel e demo memoravel.
 - Limite: nao esta publico quem vota, se todos avaliam todas as equipes ou como as notas sao agregadas.
 - Impacto: teses futuras devem passar pela banca adversarial do dossie antes de promocao.
+
+## EVD-20260912-009 — Repositorio publico
+
+- Fato: a pasta foi inicializada como repositorio Git e publicada na conta autorizada como repositorio publico.
+- Fonte: [DavidDeodato/hackas26](https://github.com/DavidDeodato/hackas26), branch `main`.
+- Verificacao: visibilidade `PUBLIC`, remoto `origin` e branch local rastreando `origin/main`.
+- Integridade: a transcricao privada nao foi copiada; caminhos locais e padroes de segredo foram removidos ou ignorados antes do primeiro push.
+- Impacto: pesquisa, decisoes, riscos e proximos passos agora possuem URL compartilhavel e historico versionado.

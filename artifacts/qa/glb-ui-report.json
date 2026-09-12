@@ -1,0 +1,295 @@
+{
+  "at": "2026-09-12T17:57:25.575Z",
+  "base": "http://localhost:4173",
+  "step": "complete",
+  "checks": [
+    {
+      "check": "one-signup",
+      "pass": true
+    },
+    {
+      "check": "trellis-feminine-controls",
+      "proceduralControlsHidden": true
+    },
+    {
+      "check": "trellis-feminine-select",
+      "metrics": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "canvas": 2,
+        "preview": {
+          "avatarRenderer": "ready",
+          "avatarSource": "trellis-feminine",
+          "avatarModelFallback": "false"
+        },
+        "stage": {
+          "renderer": "ready",
+          "presenter": "profile",
+          "avatarSource": "procedural",
+          "avatarFallback": "false"
+        }
+      },
+      "buttons": [
+        {
+          "label": "Fechar perfil",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "label": "Personalizável",
+          "disabled": false,
+          "pressed": "false"
+        },
+        {
+          "label": "Modelo masculino",
+          "disabled": false,
+          "pressed": "false"
+        },
+        {
+          "label": "Modelo feminino",
+          "disabled": false,
+          "pressed": "true"
+        },
+        {
+          "label": " Sair da conta",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "label": " Salvar perfil",
+          "disabled": false,
+          "pressed": null
+        }
+      ]
+    },
+    {
+      "check": "trellis-feminine-save",
+      "identity": {
+        "status": 200,
+        "model": "trellis-feminine",
+        "template": "masculine"
+      }
+    },
+    {
+      "check": "trellis-feminine-stage-mobile",
+      "metrics": {
+        "width": 390,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "preview": {},
+        "stage": {
+          "renderer": "ready",
+          "presenter": "profile",
+          "avatarSource": "trellis-feminine",
+          "avatarFallback": "false"
+        }
+      }
+    },
+    {
+      "check": "trellis-feminine-reload",
+      "identity": {
+        "status": 200,
+        "model": "trellis-feminine"
+      },
+      "metrics": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "preview": {},
+        "stage": {
+          "renderer": "ready",
+          "presenter": "profile",
+          "avatarSource": "trellis-feminine",
+          "avatarFallback": "false"
+        }
+      }
+    },
+    {
+      "check": "trellis-masculine-controls",
+      "proceduralControlsHidden": true
+    },
+    {
+      "check": "trellis-masculine-select",
+      "metrics": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "canvas": 2,
+        "preview": {
+          "avatarRenderer": "ready",
+          "avatarSource": "trellis-masculine",
+          "avatarModelFallback": "false"
+        },
+        "stage": {
+          "renderer": "ready",
+          "presenter": "profile",
+          "avatarSource": "trellis-feminine",
+          "avatarFallback": "false"
+        }
+      },
+      "buttons": [
+        {
+          "label": "Fechar perfil",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "label": "Personalizável",
+          "disabled": false,
+          "pressed": "false"
+        },
+        {
+          "label": "Modelo masculino",
+          "disabled": false,
+          "pressed": "true"
+        },
+        {
+          "label": "Modelo feminino",
+          "disabled": false,
+          "pressed": "false"
+        },
+        {
+          "label": " Sair da conta",
+          "disabled": false,
+          "pressed": null
+        },
+        {
+          "label": " Salvar perfil",
+          "disabled": false,
+          "pressed": null
+        }
+      ]
+    },
+    {
+      "check": "trellis-masculine-save",
+      "identity": {
+        "status": 200,
+        "model": "trellis-masculine",
+        "template": "masculine"
+      }
+    },
+    {
+      "check": "trellis-masculine-stage-mobile",
+      "metrics": {
+        "width": 390,
+        "scrollWidth": 390,
+        "canvas": 1,
+        "preview": {},
+        "stage": {
+          "renderer": "ready",
+          "presenter": "profile",
+          "avatarSource": "trellis-masculine",
+          "avatarFallback": "false"
+        }
+      }
+    },
+    {
+      "check": "trellis-masculine-reload",
+      "identity": {
+        "status": 200,
+        "model": "trellis-masculine"
+      },
+      "metrics": {
+        "width": 1280,
+        "scrollWidth": 1280,
+        "canvas": 1,
+        "preview": {},
+        "stage": {
+          "renderer": "ready",
+          "presenter": "profile",
+          "avatarSource": "trellis-masculine",
+          "avatarFallback": "false"
+        }
+      }
+    },
+    {
+      "check": "cross-tab-logout",
+      "bothLogin": true,
+      "stateClear": true
+    }
+  ],
+  "errors": [],
+  "glbHttp": [
+    {
+      "path": "/avatar/generated/trellis-feminine-v1.glb",
+      "status": 200,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "/avatar/generated/trellis-feminine-v1.glb",
+      "status": 200,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "/avatar/generated/trellis-masculine-v1.glb",
+      "status": 200,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "/avatar/generated/trellis-masculine-v1.glb",
+      "status": 200,
+      "contentType": "model/gltf-binary"
+    },
+    {
+      "path": "/avatar/generated/trellis-masculine-v1.glb",
+      "status": 200,
+      "contentType": "model/gltf-binary"
+    }
+  ],
+  "authHttp": [
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/register",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/profile",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/profile",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/logout",
+      "status": 200
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 200
+    }
+  ],
+  "syntheticAccountsCreated": 1,
+  "aiCalls": 0,
+  "status": "COMPLETE"
+}
